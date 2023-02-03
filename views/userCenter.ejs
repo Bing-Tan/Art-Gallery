@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link href="images/图标/LOGO.png" rel="shortcut icon" type="image/x-icon" />
+    <title>用户中心 - 我的信息</title>
+    <link rel="stylesheet" href='/stylesheets/userCenter/userCenter.css'><!--调用css样式-->
+</head>
+
+<body>
+<div class="container">
+    <form method="post" action="/userCenter" enctype="multipart/form-data" >
+    <p class="information">填写或修改信息</p>
+    <div class="file">
+        <span>点击更换头像：</span>
+<!--        <img style="width: 300px;border-radius: 20%;" src="<%= saveUsers.ImgUrl %>" />-->
+        <div class="userImg">
+            <input  type="file" name="ImgUrl" accept="image/gif,image/jpeg,image/x-png"  />
+            <img  src="<%= saveUsers.ImgUrl.substring (6)  %>" width="100px" />
+<!--            -->
+        </div>
+
+    </div>
+    </hr>
+
+        <dd>
+            <dl>
+                <span>当前账号：</span>
+                <span class="userNum" name="userNum"><%= saveUsers.userNum %></span>
+            </dl>
+            <dl>
+                <span>昵称：</span>
+                <input class="userName" type="text" name="userName"  maxlength="200" size="50" value="<%= saveUsers.userName %>"/>
+            </dl>
+            <dl>
+                <span>性别：</span>
+                    <input type="radio" class="gander" name="gander" checked="checked" value="boy"/><span></span>
+                    <lable>男生</lable>
+
+                    <input type="radio" class="gander" name="gander" value="girl"  /><span></span>
+                    <lable>女生</lable>
+            </dl>
+            <dl>
+                <p>个人简介：</p>
+                <textarea name="introdution" cols="100" rows="8" value="introdution"><%= saveUsers.introdution %></textarea>
+            </dl>
+
+            <dl class="button">
+                &nbsp;&nbsp;&nbsp;<input class="resetting" type="reset" name="按钮" value="重置" />
+                <input class="update" type="submit" name="按钮" value="确定修改" />&nbsp;&nbsp;
+
+            </dl>
+        </dd>
+    </form>
+</div>
+
+</body>
+<!--<script src="/javascripts/jquery.js"></script>-->
+
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <link href="images/图标/LOGO.png" rel="shortcut icon" type="image/x-icon" />
+    <title>登录图片滑动验证</title>
+    <link rel="stylesheet" href="/stylesheets/Enter/virification.css">
+</head>
+
+<body>
+<div class="container">
+    <div id="captcha"  style="position: relative;" >
+        <!-- <canvas width="310" height="155"></canvas>
+        <div class="refresh-icon"></div>
+        <canvas width="62" height="155" class="block"></canvas>
+        <div class="slider-container" active="/" method="post">
+            <div class="slider-mask">
+                <div class="slider">
+                    <span class="slider-icon"></span>
+                </div>
+            </div>
+            <span class="slider-text">向右滑动滑块填充拼图</span>
+        </div> -->
+    </div>
+    <div id="msg"  ></div>
+
+</div>
+</body>
+
+</html>
+
+<script type="text/javascript" src='javascripts/Enter/virification.js'></script>
+<script >
+
+    captcha.init(document.getElementById('captcha'),function(){
+        document.getElementById('msg').innerHTML='验证成功';
+        setTimeout(() => {
+            console.log('main');
+            // const {render} = require("ejs");
+            self.location = 'main';
+            // document.location.href = render('main');
+            // document.getElementById('msg').render = render('main');
+        }, 2000);
+    },function(){
+        document.getElementById('msg').innerHTML='验证失败';
+        setTimeout(() => {
+            document.getElementById('msg').innerHTML='';
+            // document.location.href = 'Enter';
+        }, 1000);
+    })
+</script>

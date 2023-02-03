@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="images/图标/LOGO.png" rel="shortcut icon" type="image/x-icon" />
+    <title>忘记密码</title>
+    <script type="text/javascript" src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
+    <script src="https://static.runoob.com/assets/jquery-validation-1.14.0/lib/jquery.js"></script>
+    <script src="https://static.runoob.com/assets/jquery-validation-1.14.0/dist/jquery.validate.min.js"></script>
+    <script src="https://static.runoob.com/assets/jquery-validation-1.14.0/dist/localization/messages_zh.js"></script>
+
+    <link rel='stylesheet' href='stylesheets/Enter/public.css' />
+    <link rel='stylesheet' href='stylesheets/Enter/style.css' />
+
+</head>
+
+<body>
+<div class="container">
+    <header>
+        <p class="p-box">
+            <img src="images/图标/LOGO2.png" height="40px" alt="logo" class="logo">
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <span class="title">Art Research Institute</span>
+            <img src="images/图标/电话咨询.png"height="80px" alt="联系电话 | 400-999-8888" class="num">
+        </p>
+
+    </header>
+
+    <!-- 登录框 -->
+    <div class="box">
+        <h2>忘记密码</h2>
+        <div class="form">
+            <form id = "forgetform"  name = "form" method="post" action="/forget">
+
+                <div class="input-box">
+                    <input type="text" placeholder="手机号" name="userNum" id="userNum">
+                </div>
+
+                <div class="input-box">
+                    <input type="password" placeholder="请输入6~10位密码" name="userPwd" id="userPwd">
+
+                </div>
+                <div class="input-box">
+                    <input type="password" placeholder="再次输入密码" name="reuserPwd" id="reuserPwd">
+
+                </div>
+                <div class="btn-box">
+                    <div>
+                        <input class="submit5" type="submit" value="修改"  name="mistake" id="input1">
+                    </div>
+                    <div>
+                        <p class="click">已有账户?<a href="/Enter">
+                            点击这里
+                        </a></p>
+                        <p class="click">没有账户?<a href="/register">
+                            点击注册
+                        </a></p>
+                    </div>
+
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- 底部 -->
+    <div class="footer">
+        <!-- 文字 -->
+        <p class="p-text">©Copyright of frame design is reserved in 2022.</p>
+    </div>
+</div>
+
+<video autoplay loop muted="" preload>
+    <source src="/images/register.mp4">
+</video>
+
+<script type="text/javascript">
+    $().ready(function() {
+        // 在键盘按下并释放及提交后验证提交表单
+        $("#forgetform").validate({
+            rules: {
+                //手机号
+                userNum: {
+                    required: true,
+                    minlength:11,
+                    maxlength:11,
+                    chrnum: true
+                },
+                //密码
+                userPwd: {
+                    required: true,
+                    mobile:true
+                },
+                //验证密码
+                reuserPwd: {
+                    required: true,
+                    chrnum: true,
+                    equalTo: "#userPwd"
+                },
+
+            },
+            messages: {
+                userNum: {
+                    required: "请输入手机号",
+                    minlength: "请输入正确的手机号码",
+                    maxlength:"请输入正确的手机号码"
+                },
+                userPwd:
+                    {
+                        required: "请输入密码",
+                        minlength: "请输入6-16位密码",
+                        maxlength:"请输入6-16位密码"
+                    },
+                reuserPwd: {
+                    required: "请输入密码",
+                    equalTo: "两次密码输入不一致"
+                },
+            }
+        });
+    });
+</script>
+</body>
+
+
+
+
+
+</html>

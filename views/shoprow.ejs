@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="images/图标/LOGO.png" rel="shortcut icon" type="image/x-icon" />
+    <title></title>
+<!--    <link rel="icon" href="images/图标/LOGO2.png.ico"  type="image/x-ico">-->
+    <link rel="stylesheet" href='/stylesheets/collect/shoprow.css'>
+
+</head>
+<body>
+<!-- 导航栏 -->
+<div class="header">
+    <ul>
+        <li class="">
+            <a href="/index">首页</a>
+        </li>
+        <li class="active">
+            <a href="collect">电子收藏</a>
+        </li>
+        <!-- 搜索栏 -->
+        <!--        <li class="search">-->
+        <!--            <input class="input" type="text" placeholder="请输入您要搜索的商品" />-->
+        <!--            <input class="input2" type="submit" />-->
+        <!--        </li>-->
+    </ul>
+</div>
+<div >
+    <div  class="container">
+        <form action="/shoprow" name="form2" method="post"  >
+            <div>
+<!--        <div style="position:absolute;width: 80%;height: 100vh;background-color: rgba(217,83,79,0.36);z-index: -1;">adhsf</div>-->
+                <!-- 商品图片-->
+                <input name="goods" class="goods" id="Img" type="image"  src=" " width="400px"  disabled="disabled"  />
+
+            </div>
+            <div class="describe">
+                <!-- 商品标题-->
+                <input name="goodsName" class="goodName"  id="captitle" type="text" readonly="readonly" />
+
+                <!-- 商品描述-->
+                <textarea name="explain" class="explain" id="captext" type="text"  readonly="readonly" ></textarea>
+
+                <!--   商品价格-->
+                <input name="price" class="price" id="capmon" type="text" readonly="readonly" />
+                <div name="quantity">
+                    <div class="plussub" id="plussubs" >
+                        <span id="subs" class="subs"  >&ndash;</span>
+                        <input name="quantity" class="quantity" id="quantitys" type="text" value="1" readonly="readonly">
+                        <span id="pluss" class="pluss" >&#43;</span>
+                    </div>
+                </div>
+
+            <div  class="submit">
+                <button id="car"  class="cancel" >加入收藏</button>
+                <span  id="button"  class="determine">立即购买</span>
+            </div>
+            </div>
+        </form>
+    </div>
+</div>
+<!--底部声明-->
+<div class="footer">
+    <div >
+        作品来源于网络，仅供学习鉴赏使用，
+        图片版权归原作者或原照片所有者或原出版社所有，如有冒犯或侵权,敬请联系删除。 &nbsp;|&nbsp;版权所有:******
+    </div>
+    <div >
+        ©Copyright of frame design is reserved in 2022.
+    </div>
+</div>
+<!--加入购物车弹窗--开始-->
+<div id="isDialog">
+    <div class="dialog isDialog"></div>
+    <div class="dialog-wrap isDialog"  >
+
+        <form  action="/buy" method="post">
+            <!-- 关闭按钮 -->
+            <span class="close" style="font-size: 30px;float:right;opacity: 0.6 "   onclick="document.getElementById('isDialog').style.display='none'">&times;</span>
+            <!-- 商品标题-->
+            <input name="goodsName" class="dialog-header" id="goodsName" readonly="readonly" />
+            <!-- 图片与描述-->
+            <div>
+                <!-- 商品图片-->
+                <input style="margin-left: 15%;" name="goodsUrl" type="image" id="img01"  width="400px" disabled="disabled" />
+
+                <!-- 商品描述-->
+                <input class="explains" id="explain"  style="font-size: 15px;margin-top:20px;text-align: center;color: #707070;" name="explain" readonly="readonly"   />
+            </div>
+            <div >
+                <!--   商品价格-->
+                <input class="prices"  id="price" name="price"  readonly="readonly" />
+            </div>
+            <div name="quantity">
+                <div class="plussubs" id="plussub" >
+                    请输入数量：
+                    <input name="quantity" class="quantitys" id="quantity" type="text"  value="1" >
+                </div>
+            </div>
+            <div class="dialog-footer">
+                <span class="cancel" onclick="document.getElementById('isDialog').style.display='none'">取消</span>
+                <button  class="determine" >确认购买</button>
+            </div>
+        </form>
+    </div>
+</div>
+<!--加入购物车弹窗--结束-->
+</body>
+
+<!--引入js-->
+<script src="/javascripts/jquery.js"></script>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src='javascripts/collect/session.js'></script>
+<script type="text/javascript" src='javascripts/collect/colick.js'></script>
+
+<script>
+    var timer = document.getElementById('car');
+    // timer = setTimeout(function(){ alert("Hello"); }, 3000);
+    console.log('car',timer.onclick);
+    timer.onclick = function (){
+        clearTimeout(timer);
+        timer = setTimeout(function (){
+            console.log('car');
+            clearTimeout(timer)
+        },5000)
+    }
+
+</script>
+
+
+</html>

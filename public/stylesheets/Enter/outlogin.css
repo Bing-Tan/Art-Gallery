@@ -1,0 +1,77 @@
+*{
+    padding: 0px;
+}
+
+/*设置最外框*/
+.container{
+    width: 450px;
+    /*height: 300px;*/
+    padding: 1%;
+    margin: 15% 30%;
+    box-shadow: 2px 2px 15px 2px grey;
+    /*background-color: #e38d13;*/
+}
+/*设置内框*/
+.center{
+    width: 450px;
+    height: 250px;
+    /*margin: 80px;*/
+    border: 1px solid rgba(88, 88, 88, 0.19);
+    background-color: #FFFFFF;
+}
+/*设置标题*/
+.title{
+    display: block;
+    float: left;
+    margin-left: 30%;
+    margin-top: 100px;
+}
+/*设置取消X图标*/
+.center img{
+    display: block;
+    float: right;
+    padding: 20px;
+}
+/*设置按钮*/
+.button{
+    width: 100%;
+    margin-top: 180px;
+    /*height: 200px;*/
+    text-align: right;      /*设置按钮靠右对齐*/
+}
+/*设置取消按钮*/
+.button span{
+    display: inline-block;
+    padding: 6px 10px;
+    color: #ffffff;
+    margin-top: 1px;
+    border-radius: 5px;
+    background-color: #b77c69;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.button span:hover{
+    background-color: rgb(206, 143, 120);
+    cursor:pointer;
+}
+/*设置确定按钮*/
+.button input{
+    font-size: 16px;
+    display: inline-block;
+    padding: 6px 10px;
+    color: #ffffff;
+    margin-top: 1px;
+    border-radius: 5px;
+    background-color: #b77c69;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 70px;
+    height: 33px;
+    margin-left: 15px;
+    margin-right: 50px;
+    border: none;
+}
+.button input:hover{
+    background-color: rgb(206, 143, 120);
+    cursor:pointer;
+}

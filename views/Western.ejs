@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link href="images/图标/LOGO.png" rel="shortcut icon" type="image/x-icon" />
+    <title>作品赏析 - 西方名画</title>
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel='stylesheet' href='https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css'><!--顶部样式调用-->
+    <link rel="stylesheet" href='/stylesheets/bootstrap-theme.min.css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/works/western.css"/>
+    <link rel="stylesheet" type="text/css" href="stylesheets/works/public.css"/>
+
+
+</head>
+
+
+
+<body>
+<!--文字导航-->
+<div class="header">
+    <div class="headerf">
+        <nav class="nav" id="nav">
+            <ul class="nav nav-tabs" >
+                <li class="col-md-6">
+                    <form class="col" action="/Western" method="post">
+                        <input type="text" placeholder="请输入搜索内容" name="search"  />
+                        <button name="like" >搜索</button>
+                    </form>
+                </li>
+
+                <li ><a href="index"><span><img src="images/图标/home.png" width="20px" class="Icon" /></span>&nbsp;首页 </a></li><!--glyphicon是bootstrap图标的引用-->
+                <li ><a href="works"><span></span>&nbsp;全部作品 </a></li>
+                <li  class="active" ><a href="Western"><span><img src="images/图标/Western.png" width="20px" class="Icon" /></span>&nbsp;西方画作</a></li>
+                <li ><a href="Chinese"><span><img src="images/图标/Chinese.png" width="20px" class="Icon" /></span>&nbsp;国内画作 </a></li>
+                <li ><a href="userWorks"><span><img src="images/图标/userworks.png" width="20px" class="Icon" /></span>&nbsp;用户原创 </a></li>
+
+            </ul>
+        </nav>
+    </div>
+</div>
+
+<!--<div class="search">-->
+<!--    <div class="searchBox">-->
+<!--        <ul class="lie">-->
+<!--            <li>-->
+<!--                <ul>-->
+<!--                    <span class="condition">作者 </span>-->
+<!--                    <li><input type="submit" value="梵高" ></li>-->
+<!--                    <li><input type="submit" value="莫奈" ></li>-->
+<!--                    <li><input type="submit" value="米勒" ></li>-->
+<!--                    <li><input type="submit" value="其他" ></li>-->
+<!--                </ul>-->
+<!--            </li>-->
+<!--            <li>-->
+<!--                <ul>-->
+<!--                    <span class="condition">时期 </span>-->
+<!--                    <li><input type="submit" value="" >史前时期</li>-->
+<!--                    <li><input type="submit" value="" >文艺复兴</li>-->
+<!--                    <li><input type="submit" value="" >巴洛克运动</li>-->
+<!--                    <li><input type="submit" value="" >20世纪</li>-->
+<!--                    <li><input type="submit" value="" >其他</li>-->
+<!--                </ul>-->
+<!--            </li>-->
+<!--            <li>-->
+<!--                <ul>-->
+<!--                    <span class="condition">风格 </span>-->
+<!--                    <li><input type="submit" value="写实风" ></li>-->
+<!--                    <li><input type="submit" value="抽象风" ></li>-->
+<!--                    <li><input type="submit" value="印象派" ></li>-->
+<!--                    <li><input type="submit" value="巴洛克风格" ></li>-->
+<!--                    <li><input type="submit" value="佛罗伦萨画派" ></li>-->
+<!--                    <li><input type="submit" value="浪漫主义" ></li>-->
+<!--                    <li><input type="submit" value=新古典主义 ></li>-->
+<!--                    <li><input type="submit" value="其他" ></li>-->
+<!--                </ul>-->
+<!--            </li>-->
+<!--            <li>-->
+<!--                <ul>-->
+<!--                    <span class="condition">画种 </span>-->
+<!--                    <li><input type="submit" value="水彩画" ></li>-->
+<!--                    <li><input type="submit" value="水粉画" ></li>-->
+<!--                    <li><input type="submit" value="油画" ></li>-->
+<!--                    <li><input type="submit" value="其他" ></li>-->
+<!--                </ul>-->
+<!--            </li>-->
+<!--        </ul>-->
+<!--    </div>-->
+<!--</div>-->
+
+
+<!--到航栏下的内容-->
+<div class="tuimg more">
+    <div class="tu-rightimg tu-more">
+
+        <ul id="parentUl" >
+            <% rawData.forEach(function(item){ %>
+            <li id="parentli" class="sign">
+                <!-- 触发弹窗 -->
+                <img loading="lazy" id="myImg" class="myImg"  src="<%= item.ImgUrl %>" alt="《<%= item.worksName %>》-<%= item.Author %>" width="300" height="200" />
+                <p>《<%= item.worksName %>》-<%= item.Author %></p>
+            </li>
+            <% }) %>
+                <!-- 弹窗  开始-->
+                <div id="myModal" class="modal" >
+                    <!-- 关闭按钮 -->
+                    <span class="close"  onclick="document.getElementById('myModal').style.display='none'">&times;</span>
+                    <!-- 弹窗内容 -->
+                    <img class="modal-content"   id="img01"  />
+                    <!-- 文本描述 -->
+                    <div id="caption"></div>
+                </div>
+                <!-- 弹窗  结束-->
+        </ul>
+
+
+    </div>
+<!--    <div>&#45;&#45;暂无更多&#45;&#45;</div>-->
+</div>
+
+<!--授权说明-->
+
+<div class="footer">
+    <div >
+        作品来源于网络，仅供学习鉴赏使用，
+        图片版权归原作者或原照片所有者或原出版社所有，如有冒犯或侵权,敬请联系删除。 &nbsp;|&nbsp;版权所有:******
+    </div>
+    <div >
+        ©Copyright of frame design is reserved in 2022.    </div>
+</div>
+
+<!-- 引入JS -->
+<script type="text/javascript" src='javascripts/works/alert.js'></script>
+
+</body>
+</html>

@@ -1,0 +1,313 @@
+@charset "utf-8";
+/* CSS Document */
+
+*{
+    font-family: 獅尾骨腿黑體SC-Light;
+    text-decoration: none;
+}
+
+body{
+    text-decoration: none;
+    top:20px;
+    height:100%;
+    width:100%;
+    background-color: rgba(213, 213, 213, 0.22);
+}
+.Icon{
+    margin-top: -5px;
+}
+
+.container{   /*设置容器*/
+    width:100%;
+}
+
+/*导航栏设置*/
+a{
+    text-decoration:none;
+    color:#4e413b;
+}
+
+a:hover{
+    color:#857671;
+    cursor: pointer;
+}
+/*导航栏左侧*/
+.col-md-6{
+    justify-content:left;
+    left:0px;
+    position:absolute;
+}
+
+
+/*介绍内容*/
+
+/*最外面的盒子*/
+.container{
+    display: flex;
+    position: absolute;
+    width: 100%;
+    top:15vh;
+}
+/*顶部标题*/
+.Title{
+    /*font-family: 等线;*/
+    font-size: 24px;
+    position: absolute;
+    width: 100%;
+    height: 40vh;
+    left: 0px;
+    background-color: rgb(182,169,168);
+}
+.Title p{
+    color: #FFFFFF;
+    margin-top: 20px;
+    padding-left: 15%;
+}
+/*顶部图片*/
+.Title .images{
+    width: 80%;
+    height: 200px;
+    left: 10%;
+    top:10vh;
+    position: absolute;
+    padding-left:5%;
+    overflow: hidden;
+}
+/*图片大小与位置*/
+.Title .images :nth-of-type(1){
+    display:flex;
+    float: left;
+    width: 300px;
+    border-radius: 5px;
+    overflow: hidden;
+    /*object-fit: contain;!*保持图片原尺寸*!*/
+}
+.Title .images :nth-of-type(2){
+    display:flex;
+    float: left;
+    width: 300px;
+    margin-left: 40px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.Title .images :nth-of-type(3){
+    display:flex;
+    float: left;
+    width: 300px;
+    border-radius: 5px;
+    margin-left: 40px;
+    overflow: hidden;
+}
+    /*第二个盒子*/
+.case{
+    display: flex;
+    position: relative;
+    width: 80%;
+    height: 400vh;
+    left: 10%;
+    top:40vh;
+    background-color: #FFFFFF;
+}
+/*文字内容解释*/
+.capacity{
+    width: 80%;
+    top:35px;
+    left: 5%;
+    text-indent: 2em;
+    letter-spacing:1px;
+    position: absolute;
+}
+.capacity p{
+    /*font-family: 等线;*/
+    font-size: 12px;
+}
+
+/*第三个盒子*/
+.center{
+    display: flex;
+    position: relative;
+    width: 90%;
+    height: 100vh;
+    left: 5%;
+    top:15vh;
+}
+/*目录*/
+.catalog{
+    margin-left: 15px;
+    width: 450px;
+    height: 150px;
+    position: absolute;
+    top: 1vh;
+    left: 15px;
+    bottom: 5vh;
+    border-top: 1px solid rgba(60, 60, 60, 0.24);
+    border-bottom: 1px solid rgba(60, 60, 60, 0.24);
+}
+.catalog .title{
+    width: 50px;
+    height: 90px;
+    position: absolute;
+    color: #001e42;
+    top: 3vh;
+    padding-top: 35px;
+    left: 15px;
+    text-align: center;
+}
+.catalog form{
+    width: 100px;
+    position: absolute;
+    top: 3vh;
+    left: 80px;
+    color: rgba(60, 60, 60, 0.5);
+    border-left: 1px dashed #3c3c3c;
+}
+.catalog form .formone{
+    display: block;
+    float: left;
+    width: 180px;
+    position: absolute;
+    color: rgba(60, 60, 60, 0.5);
+}
+
+.catalog form .formtwo{
+    display: block;
+    float: left;
+    width: 180px;
+    left: 180px;
+    position: relative;
+    color: rgba(60, 60, 60, 0.5);
+    border-left: 1px dashed #3c3c3c;
+}
+
+/*正文*/
+.body-text{
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    left: 10px;
+    top:25vh;
+}
+.body-text-two{
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    left: 15px;
+    top:70vh;
+}
+.body-text-three{
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    left: 15px;
+    top:115vh;
+}
+.body-text-four{
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    left: 15px;
+    top:160vh;
+}
+.body-text-five{
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    left: 15px;
+    top:205vh;
+}
+.body-text-six{
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    left: 15px;
+    top:245vh;
+}
+.body-text-seven{
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    left: 15px;
+    top:290vh;
+}
+.body-text-eight{
+    display: flex;
+    position: absolute;
+    width: 100%;
+    left: 15px;
+    top:335vh;
+}
+
+.primary{
+    /*font-family: 等线;*/
+    font-size: 20px;
+    color: #000000;
+    margin-top: 5px;
+    margin-left: 15px;
+    display: flex;
+    position: relative;
+    width: 100%;
+    height:35px;
+    border-bottom:1px dashed rgba(60, 60, 60, 0.65);
+
+}
+.primary .component{
+    height: 30px;
+    padding: 5px;
+    display: block;
+    background-color: #e38d13;
+}
+.primary .component:hover{
+    /*text-decoration:none;*/
+    background-color: #ffcb8b;
+}
+/*内容的盒子*/
+.primary .text{
+    display: flex;
+    float: left;
+    position: absolute;
+    width: 100%;
+    top: 5vh;
+}
+/*设置文本*/
+.primary .text .file{
+    /*display: flex;*/
+    float: left;
+    position: relative;
+    width: 60%;
+    height: 40vh;
+    top: 5vh;
+}
+.primary .text .file p{
+    font-size: 13px;
+    text-indent: 2em;
+}
+/*设置图片*/
+.primary .text .img{
+    width: 300px;
+    position: relative;
+    height: 30vh;
+    left: 5%;
+    top: 5vh;
+    overflow: hidden;
+}
+.primary .text .img:hover{
+    opacity: 0.80;
+    cursor: pointer;
+}
+
+/*底部声明*/
+.footer{
+    height: 40px;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(221, 221, 221, 0.81);
+    position: fixed;
+    bottom: 0;
+}

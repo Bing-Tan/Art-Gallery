@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link href="images/图标/LOGO.png" rel="shortcut icon" type="image/x-icon" />
+    <title>电子收藏</title>
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css"><!--Bootstrap调用-->
+    <link rel="stylesheet" href='/stylesheets/collect/collect.css'>
+</head>
+<body>
+<nav class="nav" id="nav">
+    <ul class="nav nav-tabs" >
+        <li class="col-md-6">
+            <img src="images/图标/LOGO2.png" width="60px" class="glyphicon" /><span></span><span style="font-size: 20px;font-family:Blackadder ITC;">&nbsp Art Research Institute</span><!--左标签-->
+            <span> &nbsp &nbsp <img src="images/图标/电话咨询.png" width="230px" class="glyphicon" /></span>
+        </li>
+
+        <!--首页开始-->
+        <li style="padding-top: 8px;" ><a onclick="window.open('/index')"><span><img src="images/图标/home.png" width="20px" class="Icon" /></span>&nbsp;&nbsp;首页 </a></li>
+        <li style="padding-top: 8px;" class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#" >作品赏析 <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+                <li><a  href="Western"><span><img src="images/图标/Western.png" width="20px" class="Icon" /></span>&nbsp;&nbsp;西方名画</a></li>
+                <li><a  href="Chinese"><span><img src="images/图标/Chinese.png" width="20px" class="Icon" /></span>&nbsp;&nbsp;国内名画</a></li>
+                <li><a  href="userWorks"><span><img src="images/图标/userworks.png" width="20px" class="Icon" /></span>&nbsp;&nbsp;当代画作</a></li>
+                <li class="divider"></li>
+                <li><a href="/works">&nbsp&nbsp全部作品</a></li>
+            </ul>
+        </li>
+
+        <li style="padding-top: 8px;" class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#" >美术史 <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+                <li><a href="Whistory"><span><img src="images/图标/Westernwork.png" width="20px" class="Icon" /></span>&nbsp;&nbsp;西方绘画史</a></li>
+                <li><a href="Chistory"><span><img src="images/图标/Chinesework.png" width="20px" class="Icon" /></span>&nbsp;&nbsp;中国绘画史</a></li>
+            </ul>
+        </li>
+
+        <li style="padding-top: 8px;" ><a href="/News"><span><img src="images/图标/New.png" width="20px" class="Icon" /></span>&nbsp;&nbsp;艺术新闻 </a></li>
+        <li style="padding-top: 8px;" ><a href="/collect"><span ><img src="images/图标/collect.png" width="20px" class="Icon" /></span>&nbsp;&nbsp;电子收藏 </a></li>
+        <li style="padding-top: 8px;" ><a onclick="window.open('/Enter')"><span> <img src="images/图标/user.png" width="20px" class="Icon" /></span>&nbsp;&nbsp;登录/注册 &nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+
+    </ul>
+</nav>
+
+
+<!-- 轮播图 -->
+<div class="swiper">
+    <!-- 轮播图 -->
+    <div id="wrap" class="wrap">
+        <!-- 图片 -->
+        <ul id="pic">
+            <li><img src="images/收藏中心/xh1.jpg" alt="" /></li>
+            <li><img src="images/收藏中心/hd1.jpg" alt="" /></li>
+            <li><img src="images/收藏中心/xh2.jpg" alt="" /></li>
+        </ul>
+        <!-- 下标 -->
+        <ol id="list">
+            <li class="on">1</li>
+            <li>2</li>
+            <li>3</li>
+        </ol>
+    </div>
+</div>
+
+
+<!-- 标题 -->
+<div class="title">
+    <h3>推荐藏品</h3>
+</div>
+
+<!-- 商品栏 -->
+<div class="shop" >
+    <ul id="parentUl" >
+        <!-- 商品 -->
+        <% userData.forEach(function(item){ %>
+        <li id="lister" >
+            <span class="a" id="a"> </span>
+            <div>
+                <!--                商品图片-->
+                <img id="myImg" src="<%= item.goods.substring (6) %>" alt="<%= item.explain %>" />
+                <!--                商品标题-->
+                <h4 class="work" ><%= item.goodsName %></h4>
+                <!--                商品说明-->
+                <div class="em">
+                    <div><%= item.explain %> </div>
+                </div>
+            </div>
+            <!--            商品价格-->
+            <p class="price"><%= item.price %></p>
+        </li>
+        <% }) %>
+    </ul>
+</div>
+
+<!--底部声明-->
+<div class="footer">
+    <div >
+        作品来源于网络，仅供学习鉴赏使用，
+        图片版权归原作者或原照片所有者或原出版社所有，如有冒犯或侵权,敬请联系删除。 &nbsp;|&nbsp;版权所有:******
+    </div>
+    <div >
+        ©Copyright of frame design is reserved in 2022.
+    </div>
+</div>
+
+
+</body>
+<script src="/javascripts/jquery.js"></script>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src='javascripts/collect/collect.js'></script>
+<script type="text/javascript" src='javascripts/collect/alert.js'></script>
+
+<script>
+    // var showCode1 = document.getElementsByClassName('work');
+    // var img = document.getElementById('myImg');
+    // console.log('showCode1',img);
+    // localStorage.setItem("test1",JSON.stringify(img));
+    // console.log('localStorage',JSON.parse(localStorage.getItem('test1')));
+
+    // document.getElementById("img01").innerHTML = localStorage.getItem("test1");
+    // console.log('test1',document.getElementById("img01").innerHTML);
+</script>
+
+</html>

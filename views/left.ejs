@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--图标组件库-->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href='/stylesheets/userCenter/mainStyle.css'>
+    <link rel="stylesheet" href='/stylesheets/bootstrap-theme.min.css'>
+    <link href="images/图标/LOGO.png" rel="shortcut icon" type="image/x-icon" />
+    <title>用户中心</title>
+</head>
+
+<body>
+ <nav class="sidebar">
+        <header>
+            <div class="image-text">
+              <div class="hezi">
+                <div class="image">
+                    <img src="<%= saveUsers.ImgUrl.substring (6) %>" width="100px" class="img-circle"  />
+                </div>
+                <div class="text logo-text">
+                    <span class="profession" name="userSign">  <%= saveUsers.userNum %></span>
+                    <span class="name"  name="userName"> <%= saveUsers.gander %>  &nbsp; <%= saveUsers.userName %></span>
+                </div>
+              </div>
+
+                <ul class="introdution">
+                    <textarea name="introdution" cols="25" rows="5" value="introdution" readonly="readonly"><%= saveUsers.introdution %></textarea>
+                </ul>
+            </div>
+        </header>
+
+         <div class="menu-bar">
+             <div class="menu">
+                 <!--搜索框-->
+
+                 <!--首页-->
+                 <ul class="menu-links">
+<!--                     taget用于获取右边页面-->
+                    <li class="nav-link">
+                        <a href="/index"  target="main">
+                            <span><img src="images/图标/home.png" width="30px" class="Icon" /></span>&nbsp;&nbsp;首页</span>
+                        </a>
+                    </li>
+                    <!--下面的小li都是一样的，只需要修改文字和图标-->
+                    <li class="nav-link">
+                        <a href="/bannerList" target="right">
+                            <span><img src="images/图标/userworks.png" width="30px" class="Icon" /></span>&nbsp;&nbsp;我的作品</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="/userCollect" target="right">
+                            <span><img src="images/图标/collect.png" width="30px" class="Icon" /></span>&nbsp;&nbsp;我的收藏</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="userCenter" target="right">
+                            <span><img src="images/图标/user.png" width="30px" class="Icon" /></span>&nbsp;&nbsp;个人信息</span>
+                        </a>
+                    </li>
+                    <li >
+                        <a href="outlogin" target="_top" >
+                            <span ><img src="images/图标/out.png" width="30px" class="Icon" /></span>&nbsp;&nbsp;退出账户</span>
+                        </a>
+                    </li></ul>
+            </div>
+        </div>
+    </nav>
+
+ <script >
+
+ </script>
+</body>
+
+</html>

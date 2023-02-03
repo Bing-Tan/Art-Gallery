@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link href="images/图标/LOGO.png" rel="shortcut icon" type="image/x-icon" />
+    <title>作品赏析 - 全部作品</title>
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel='stylesheet' href='https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css'><!--顶部样式调用-->
+    <link rel="stylesheet" href='/stylesheets/bootstrap-theme.min.css'>
+    <link rel="stylesheet" href='stylesheets/Works/works.css' />
+    <link rel='stylesheet' href='stylesheets/index/first.1.css' /><!--全局css文件-->
+<style>
+
+</style>
+</head>
+
+
+<body>
+<div class="header">
+    <div class="headerf">
+        <nav class="nav" id="nav">
+            <ul class="nav nav-tabs" >
+                <li class="col-md-6">
+                    <form class="hr" action="/works" method="post">
+                        <input type="text" placeholder="请输入搜索内容" name="search"  />
+                        <button name="like" >搜索</button>
+                    </form>
+                </li>
+
+                <li ><a href="index"><span><img src="images/图标/home.png" width="20px" class="Icon" /></span>&nbsp;首页 </a></li><!--glyphicon是bootstrap图标的引用-->
+                <li class="active" ><a href="works"><span></span>&nbsp;全部作品 </a></li>
+                <li ><a href="Western"><span><img src="images/图标/Western.png" width="20px" class="Icon" /></span>&nbsp;西方画作</a></li>
+                <li ><a href="Chinese"><span><img src="images/图标/Chinese.png" width="20px" class="Icon" /></span>&nbsp;国内画作 </a></li>
+                <li ><a href="userWorks"><span><img src="images/图标/userworks.png" width="20px" class="Icon" /></span>&nbsp;用户原创 </a></li>
+
+            </ul>
+        </nav>
+    </div>
+</div>
+
+<!--返回顶部-->
+<button onclick="topFunction()" id="Totop" title="回顶部">
+    <img src="images/图标/回到顶部.png" width="20px" height="20px" />
+    <p>顶部 </p>
+</button>
+
+<div style="width: 98.5vw;margin-bottom: 50px;">
+<div class="container" style="padding-top:30px;padding-bottom:30px;border-radius:2%;background-color: #294d61;margi-bottom:50px;">
+    <div class="item active" style="background-image: url(images/全部作品/sheng.jpg);">
+        <div class="shadow"></div>
+        <div class="content">
+            <div class="icon">
+                <i class="fa fa-cloud"></i>
+            </div>
+            <div class="text">
+                <div class="tit">圣罗马诺战役</div>
+                <div class="sub">乌切诺/公元1455年（伦敦国家画廊）</div>
+            </div>
+        </div>
+    </div>
+    <div class="item" style="background-image: url(images/全部作品/as.jpg);">
+    <div class="shadow"></div>
+    <div class="content">
+        <div class="icon">
+            <i class="fa fa-sun-o"></i>
+        </div>
+        <div class="text">
+            <div class="tit">圣方济各向鸟雀布道</div>
+            <div class="sub">乔托/约公元1297年-1300年（阿西西圣方济各大教堂）</div>
+        </div>
+    </div>
+</div>
+    <div class="item" style="background-image: url(images/全部作品/ren.jpg);">
+        <div class="shadow"></div>
+        <div class="content">
+            <div class="icon">
+                <i class="fa fa-tint"></i>
+            </div>
+            <div class="text">
+                <div class="tit">人间乐园</div>
+                <div class="sub">博斯/公元1500年-1510年（马德里普拉多美术馆）</div>
+            </div>
+        </div>
+    </div>
+    <div class="item" style="background-image: url(images/全部作品/tang.jpg);">
+        <div class="shadow"></div>
+        <div class="content">
+            <div class="icon">
+                <i class="fa fa-bolt"></i>
+            </div>
+            <div class="text">
+                <div class="tit">唐苑嬉春图</div>
+                <div class="sub">朱瞻基/明</div>
+            </div>
+        </div>
+    </div>
+    <div class="item" style="background-image: url(images/全部作品/xing.jpg);">
+        <div class="shadow"></div>
+        <div class="content">
+            <div class="icon">
+                <i class="fa fa-snowflake-o"></i>
+            </div>
+            <div class="text">
+                <div class="tit">南巡苏州虎丘行宫图</div>
+                <div class="sub">焦秉贞/清</div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<div class="tuimg more">
+    <div class="tu-rightimg tu-more">
+        <ul id="parentUl" >
+            <% rawData.forEach(function(item){ %>
+            <li  class="sign">
+                <img loading="lazy"  class="myImg"  src="<%= item.ImgUrl %>" alt="《<%= item.worksName %>》-<%= item.Author %> <%= item.Explain %>" />
+                <p>《<%= item.worksName %>》-<%= item.Author %></p>
+            </li>
+            <% }) %>
+
+            <% westernData.forEach(function(item){ %>
+            <li class="sign">
+                <img loading="lazy"  class="myImg" src="<%= item.ImgUrl %>" alt="《<%= item.worksName %>》-<%= item.Author %> <%= item.Explain %>" />
+                <p>《<%= item.worksName %>》-<%= item.Author %></p>
+            </li>
+            <% }) %>
+
+            <% ChineseData.forEach(function(item){ %>
+            <li class="sign">
+                <img loading="lazy"  class="myImg" src="<%= item.ImgUrl %>" alt="《<%= item.worksName %>》-<%= item.Author %> <%= item.Explain %>" />
+                <p>《<%= item.worksName %>》-<%= item.Author %></p>
+            </li>
+            <% }) %>
+
+            <% userData.forEach(function(item){ %>
+            <li class="sign">
+                <img loading="lazy"  class="myImg" src="<%= item.ImgUrl %>" alt="《<%= item.worksName %>》-<%= item.Author %> <%= item.Explain %>" />
+                <p>《<%= item.worksName %>》-<%= item.Author %></p>
+            </li>
+            <% }) %>
+            <% userCenter.forEach(function(item){ %>
+            <li class="sign">
+                <img loading="lazy"  class="myImg" src="<%= item.ImgUrl.substring (6) %>" alt="《<%= item.worksName %>》-<%= item.Author %> <%= item.Explain %>" />
+                <p>《<%= item.worksName %>》-<%= item.Author %></p>
+            </li>
+            <% }) %>
+            <!-- 弹窗  开始-->
+            <div id="myModal" class="modal">
+                <!-- 关闭按钮 -->
+                <span class="close"  onclick="document.getElementById('myModal').style.display='none'">&times;</span>
+                <!-- 弹窗内容 -->
+                <img class="modal-content"  id="img01">
+                <!-- 文本描述 -->
+                <div id="caption"></div>
+            </div><!-- 弹窗  结束-->
+        </ul>
+
+    </div>
+</div>
+    <!--授权说明-->
+    <div class="footer">
+            <div >
+                作品来源于网络，仅供学习鉴赏使用，
+                图片版权归原作者或原照片所有者或原出版社所有，如有冒犯或侵权,敬请联系删除。 &nbsp;|&nbsp;版权所有:******
+            </div>
+            <div >
+                ©Copyright of frame design is reserved in 2022.
+            </div>
+    </div>
+
+
+<!-- 引入JS -->
+<script type="text/javascript" src='javascripts/works/alert.js'></script>
+<script type="text/javascript" src='javascripts/index/Totop.js'></script>
+<script>
+
+</script>
+</body>
+</html>

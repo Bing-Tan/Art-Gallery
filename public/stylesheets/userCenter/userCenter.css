@@ -1,0 +1,120 @@
+/*全局设置*/
+body{
+    height: 90vh;
+    /*background-image:url(image/图标/LOGO2.png) ;*/
+    /*background:linear-gradient( #ffffff, rgba(255, 255, 255, 0.4));*/
+}
+/*设置段落*/
+p{
+    font-size:18px;/*字体大小*/
+}
+/*超链接设置*/
+a:link,a:visited{
+    color:#FFF;/*访问前后的字体颜色*/
+    text-decoration:none;/*访问前后字体无默认下划线*/
+}
+.container{
+    width:60%;  /*盒子页面宽度百分比*/
+    line-break: normal;
+    margin: auto;
+    padding:3%;
+    border: 1px solid #6d6d6d;
+    border-radius: 36px;
+    background: rgba(255, 255, 255, 0.12);
+}
+/*修改标题*/
+.information{
+    font-family: 华文细黑;
+    font-size: 24px;
+    color: #3c3c3c;
+    margin-left: 40%;
+    margin-bottom: 50px;
+}
+
+/*修改昵称输入框*/
+.userName{
+    height: 30px;
+    border: 1px solid #000c47;
+    padding-left: 15px;
+    border-radius: 36px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+/*个人简介*/
+textarea{
+    padding: 10px;
+    font-family: 等线;
+    font-size: 15px;
+    border:1px solid rgba(60, 60, 60, 0.49);
+    outline: none;/*边线不显示*/
+    resize: none;/*禁止拉伸*/
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+/*更换头像*/
+.file{
+    width: 300px;
+    height: 50px;
+    margin-left: 42px;
+    /*border: 1px solid #e38d13;*/
+}
+.file span{
+    /*position: absolute;*/
+}
+.userImg input{
+    z-index: 5;
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    opacity: 0;
+    position: absolute;
+}
+.userImg{
+    position: relative;
+    width: 60px;
+    height: 60px;
+    vertical-align: center;
+    text-align: center;
+    margin-left: 120px;
+    margin-top: -40px;
+    border: 1px solid rgba(255, 191, 153, 0.36);
+    /*margin-right: 20px;*/
+    overflow: hidden;
+    border-radius: 50%;
+}
+.userImg img{
+    position: relative;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+
+/*设置按钮*/
+.resetting {
+    font-family: 黑体;
+    font-size: 18px;
+    color: #ffffff;
+    width: 100px;
+    height: 40px;
+    border-radius: 36px;
+    border:none;
+    background-color: rgba(199, 169, 154, 1);
+    margin-left: 50px;
+}
+.update {
+    font-family: 黑体;
+    font-size: 18px;
+    color: #ffffff;
+    width: 100px;
+    height: 40px;
+    text-align: center;
+    border-radius: 36px;
+    border:none;
+    background-color: rgba(199, 169, 154, 1);
+    margin-left: 50px;
+}
+.button input:hover{
+    cursor: pointer;
+    background-color: rgba(199, 169, 154, 0.83);
+}

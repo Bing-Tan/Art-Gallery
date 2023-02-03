@@ -1,0 +1,479 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+.content{
+	/*font-family: "华文宋体";*/
+}
+
+.BigBox{
+	margin-top: 50px;
+	width:1300px;
+	height:660px;
+	margin-left:75px;     /*设置左边外边距*/
+	box-shadow:0px 0px 10px 10px rgba(243, 239, 232, 0.36);
+}
+
+.title{
+	padding-top: 20px;/*设置内边距*/
+	color: rgb(66, 66, 66);
+	margin-bottom: 10px;
+	text-align: center;
+}
+
+.works{
+	margin-bottom: 10px;
+	color: rgb(102, 102, 102);
+	font-size: 15px;
+	text-align: center;
+}
+
+
+/*中间过渡的横线*/
+.link-top {
+	width: 100%;
+	margin-bottom: 20px;
+	margin-top: 20px;
+	border-top: solid #ACC0D8 1px;
+}
+
+/*推荐作品 */
+.Box-1{
+	display:inline-block;
+	float: left;
+	left:15px;
+	position: relative; /*相对位置*/
+	width: 300px; /*宽度*/
+	height: 400px;
+	background-color:rgba(255,255,255,0.5);
+	margin-right: 20px;
+	justify-content: space-around; /*周围允许有空间*/
+}
+
+/*设置翻页*/
+.pag-box{ /*内容盒子*/
+	position: relative;
+	width: 250px;
+	height: 300px;
+	margin: 15px 0px;
+	perspective: 1000px;
+	border-radius: 12px;
+	overflow: hidden; /*超出隐藏*/
+
+}
+.pag-box .imgBx{ /*盒子内图片*/
+	position: absolute;
+	top: 0; /*距上部*/
+	left: 0; /*距左部*/
+	width: 100%;
+	height: 100%;
+	border-radius: 12px;
+	transform-origin: top; /*3D起始位置*/
+	transform-style: preserve-3d; /*子元素保留3D*/
+	transition: 0.5s; /*延迟时间设置*/
+}
+.pag-box .imgBx img{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border-radius: 12px;
+	object-fit: cover; /*图片大小为适应布局*/
+	transition-delay: 0.2s;
+}
+.pag-box:hover .imgBx{ /*图片悬停时*/
+	border-radius: 12px;
+	transition-delay: 0s; /*过渡从何开始（等待秒数）*/
+	transform: rotateY(-90deg); /*X轴旋转*/
+	opacity: 0; /*透明度*/
+}
+.pag-box .Box-content{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgb(163, 162, 173); /*旋转后的背景颜色*/
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 40px;
+	transform-origin: bottom;
+	transform-style: preserve-3d;
+	transition: 1.5s;
+	transform: rotateY(90deg);
+	opacity: 0;
+	color: #fff; /*字体颜色*/
+}
+.pag-box:hover .Box-content{
+	transform: rotateX(0deg);
+	opacity: 1;
+	transition-delay: 0.2s;
+}
+
+.text{
+	margin: 0px 5px 0px 5px;
+}
+
+.detail{
+	font-size: 10px;
+	color: rgb(0, 48, 80);
+	margin-top: 10px;
+	margin-left: 180px;
+	border: none;
+	border-radius: 12px;
+	height: 20px;
+	background-color: rgba(255, 255, 255, 0) ;
+}
+
+.detail:hover{
+	text-decoration: underline;
+}
+
+.more{
+	font-size: 18px;
+	margin-top: 40px;
+	/*font-family: "等线";*/
+	text-align: center;
+	width: 100%;
+	height: 40px;
+	border:none;
+	border-radius: 5px;
+	color: rgb(147, 135, 134);
+	background-color: rgb(229, 223, 219);
+}
+
+.more:hover{
+	color: rgb(255, 255, 255);
+	background-color: rgb(193, 179, 168);
+}
+
+/*设置西方美学史盒子*/
+.BigBox-two{
+	margin-top: 100px;
+	width:1300px;
+	height:660px;
+	border:none;
+	margin-left:75px;     /*设置左边外边距*/
+	margin-bottom: 50px;
+}
+.BigBox-two .two-1{
+	width: 1300px;
+	height: 550px;
+	border:none;
+}
+.BigBox-two .two-1 .images{
+	padding-top: 30px;
+	width: 1200px;
+	height:200px;
+	overflow: hidden;
+}
+.BigBox-two .two-1 .images > img{
+	justify-content: center;
+}
+.link-western{
+	width: 90%;
+	margin-bottom: 20px;
+	margin-top: 20px;
+	border-radius: 2px;
+	box-shadow: rgba(255,255,255,0.5);
+	border-top: 2px dashed rgba(230, 219, 204,0.5);
+}
+.text-box h3{
+	color: #242526;
+	width: 70%;
+	text-align: left;
+}
+.text-box .input-text{
+	font-size: 15px;
+	text-align: left;
+	padding: 15px;
+	width: 90%;
+	height: 250px;
+}
+
+/*设置国内美学史盒子*/
+.BigBox-thr{
+	margin-top: 50px;
+	width:90%;
+	height:660px;
+	border:none;
+	/*position: absolute;*/
+	margin-left:75px;     /*设置左边外边距*/
+	margin-bottom: 60px;
+	overflow: hidden;
+	/*border: 1px solid #3c3c3c;*/
+}
+
+
+/* 设置白色背景框 */
+.BigBox-thr .thr-1{
+	padding-top: 35px;
+	/*width: 1300px;*/
+	height: 550px;
+	border:none;
+	overflow: hidden;
+	/*border: 1px solid #3c3c3c;*/
+}
+/*1.设置内框*/
+.containI{
+	height: 200px;
+	width: 95%;
+}
+.imageI{
+	height: 200px;
+	width: 700px;
+	float: left;
+	padding-bottom: 0;
+	padding-top: 10px;
+	overflow: hidden;
+}
+.textI{
+	height: 200px;
+	width: 700px;
+	float: left;
+	text-align: center;
+	padding-top: 15px;
+	padding-left: 50px;
+	text-align: left;
+	overflow: hidden;
+}
+.ShangI{
+	text-align: center;
+	margin-top: 0;
+	/*width: 30px;*/
+	height: 30px;
+	border-radius: 5%;
+	background-color: chocolate;
+}
+.textI p{
+	/*font-family: '等线';*/
+	font-size: 10px;
+	padding-top: 15px;
+}
+/*2.设置内框*/
+.containII{
+	/*margin-top: 1300px;*/
+	height: 150px;
+	width: 95%;
+	justify-content: center;
+	background-color: rgba(230, 219, 204, 0.26);
+}
+.imageII{
+	height: 140px;
+	width: 700px;
+	justify-content: center;
+	float: left;
+	padding-top: 10px;
+	padding-left: 10px;
+	overflow: hidden;
+}
+.textII{
+	height: 150px;
+	width: 700px;
+	float: left;
+	text-align: center;
+	padding-top: 15px;
+	padding-left: 50px;
+	text-align: left;
+	overflow: hidden;
+}
+.ShangII{
+	text-align: center;
+	margin-top: 0;
+	/*width: 30px;*/
+	height: 30px;
+	border-radius: 5%;
+	background-color: #f8a46a;
+}
+.textII p{
+	padding-top: 15px;
+	/*font-family: '等线';*/
+	font-size: 20px;
+}
+/*3.设置内框*/
+.containIII{
+	height: 200px;
+	width: 95%;
+	margin-top: 20px;
+	justify-content: center;
+}
+.imageIII{
+	height: 200px;
+	width: 600px;
+	margin-top: -150px;
+	justify-content: center;
+	float: right;
+	overflow: hidden;
+}
+.textIII{
+	height: 150px;
+	width: 700px;
+	float: left;
+	text-align: center;
+	padding-top: 15px;
+	padding-right: 100px;
+	text-align: left;
+	overflow: hidden;
+}
+.ShangIII{
+	/*font-family: 黑体;*/
+	/*color: #FFFFFF;*/
+	text-align: center;
+	margin-top: 0;
+	/*width: 30px;*/
+	height: 30px;
+	border-radius: 5%;
+	background-color: rgb(199,169,154);
+}
+.textIII p{
+	padding-top: 15px;
+	/*font-family: '等线';*/
+	font-size: 10px;
+}
+
+/*新闻盒子*/
+.BigBox-News{
+	margin-top: 150px;
+	width:1300px;
+	height:660px;
+	border:none;
+	margin-left:75px;     /*设置左边外边距*/
+	margin-bottom: 30px;
+}
+/* 设置白色背景框 */
+.BigBox-News .thr-1{
+	padding-top: 35px;
+	width: 1300px;
+	height: 550px;
+	background-color: #fff;
+	overflow: hidden;
+}
+.NewBox{
+	display: flex;
+	float: left;
+	width: 50%;
+	height:500px;
+	overflow: hidden;
+}
+.NewBox2{
+	display: flex;
+	float: right;
+	width: 50%;
+	height:500px;
+	overflow: hidden;
+}
+.NewBox > h3{
+	width: 100%;
+	height: 30px;
+	text-align: right;
+	/*font-family: '等线 Light';*/
+	flex-direction: column;  /* 按照列column(垂直方向)排列*/
+}
+.NewBox2 > h3{
+	width: 100%;
+	height: 30px;
+	text-align: left;
+	/*font-family: '等线 Light';*/
+	flex-direction: column;  /* 按照列column(垂直方向)排列*/
+}
+.PBox{
+	float:left;
+	margin-top: 100px;
+	margin-left: -30%;
+	width:-100%;
+	padding-right: 30px;
+	border-right: 1px solid rgba(60, 60, 60, 0.6);
+}
+.PBox2{
+	float:left;
+	margin-top: 100px;
+	margin-left: -50%;
+	width:-100%;
+	padding-right: 30px;
+}
+
+.PBox img{
+	float:left;
+	padding-left: 30px;
+	width:300px;
+	padding-right: 30px;
+	border-radius: 30%;
+}
+.PBox2 img{
+	float:left;
+	padding-left: 30px;
+	width:300px;
+	padding-right: 30px;
+	border-radius: 50%;
+}
+.PBox div{
+	/*font-family: '微软雅黑';*/
+	text-indent: 2em;
+	line-height: 30px;
+	text-align: right;
+}
+.PBox2 div {
+	/*font-family: '微软雅黑';*/
+	text-align: right;
+	text-indent: 2em;
+	line-height: 30px;
+}
+.PBox div > a {
+	text-decoration: none;
+}
+.PBox2 div > a {
+	text-decoration: none;
+}
+
+
+
+/*底边盒子*/
+.divCopyright{
+	position: absolute;
+	margin-top: 60px;
+	width: 100%;
+	height: 370px;
+	overflow: hidden;
+}
+.Above-Box{
+	/*font-family: "华文宋体";*/
+	height: 300px;
+	background-color: #fff;
+	overflow: hidden;
+}
+.Above-Box > img{
+	position: absolute;
+	margin-top: -80px;
+	padding-top: 30px;
+	margin-left: 200px;
+}
+.Below-Box{
+	padding-top: 20px;
+	background-color: rgb(247, 246, 246);
+}
+#writing{
+	float: right;
+}
+
+
+/*返回顶部*/
+#Totop {
+	display: none;
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	z-index: 9999;
+	border: none;
+	outline: none;
+	background-color: rgb(220, 220, 220);
+	cursor: pointer;
+	padding: 15px;
+	border-radius: 10px;
+	opacity: 0.5;
+}
+
+#Totop:hover {
+	opacity: 0.8;
+}

@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link href="images/图标/LOGO.png" rel="shortcut icon" type="image/x-icon" />
+    <title>艺术新闻 - 主页</title>
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel='stylesheet' href='https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css'><!--顶部样式调用-->
+
+    <link rel="stylesheet" href='stylesheets/News/News.css' />
+
+</head>
+<body>
+<div>
+    <div>
+        <nav class="" id="nav">
+            <ul class="nav nav-tabs" >
+                <li class="left">
+                    <img class="LOGO" src="images/图标/LOGO2.png" width="60px" class="glyphicon" /><span></span><span class="wenzi ">&nbsp Art Research Institute</span><!--左标签-->
+                    <span> &nbsp &nbsp <img class="phone" src="images/图标/电话咨询.png" width="230px" class="glyphicon" /></span>
+                </li>
+
+                <!--首页开始-->
+                <li style="padding-top: 8px;" ><a href="index"><span><img src="images/图标/home.png" width="20px" class="Icon" /></span>&nbsp;&nbsp;首页 </a></li>
+                <li style="padding-top: 8px;" class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" >作品赏析 <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a  href="Western"><span><img src="images/图标/Western.png" width="20px" class="Icon" /></span>&nbsp;&nbsp;西方名画</a></li>
+                        <li><a  href="Chinese"><span><img src="images/图标/Chinese.png" width="20px" class="Icon" /></span>&nbsp;&nbsp;国内名画</a></li>
+                        <li><a  href="userWorks"><span><img src="images/图标/userworks.png" width="20px" class="Icon" /></span>&nbsp;&nbsp;当代画作</a></li>
+                        <li class="divider"></li>
+                        <li><a href="/works">&nbsp&nbsp全部作品</a></li>
+                    </ul>
+                </li>
+
+                <li style="padding-top: 8px;" class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#" >美术史 <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="Whistory"><span><img src="images/图标/Westernwork.png" width="20px" class="Icon" /></span>&nbsp;&nbsp;西方绘画史</a></li>
+                        <li><a href="Chistory"><span><img src="images/图标/Chinesework.png" width="20px" class="Icon" /></span>&nbsp;&nbsp;国内绘画史</a></li>
+                    </ul>
+                </li>
+
+                <li style="padding-top: 8px;" ><a href="/News"><span><img src="images/图标/New.png" width="20px" class="Icon" /></span>&nbsp;&nbsp;艺术新闻 </a></li>
+                <li style="padding-top: 8px;" ><a href="/collect"><span ><img src="images/图标/collect.png" width="20px" class="Icon" /></span>&nbsp;&nbsp;电子收藏 </a></li>
+                <li style="padding-top: 8px;" ><a onclick="window.open('/Enter')"><span> <img src="images/图标/user.png" width="20px" class="Icon" /></span>&nbsp;&nbsp;登录/注册 &nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+
+            </ul>
+
+
+<!--            新闻主页导航栏  -->
+            <ul class="navigation" >
+                <li class="active" ><a href="/News">主页</a></li>
+                <li ><a href="/NewPage">新闻</a></li>
+                <li ><a href="/gallery">展讯</a></li>
+            </ul>
+        </nav>
+    </div>
+
+
+    <!--内容部分-->
+    <div class="container">
+        <div class="case">
+            <div class="box">
+                <header>
+                    <div class="image-slider">
+                        <!-- 第一张幻灯片  开始 -->
+                        <div class="slide current">
+                            <img class="image" src="images/新闻资讯/主页/AI绘图.jpg" alt="AI 绘图" />
+                            <div class="content">
+                                <p class="description">
+                                    不是吧！画家集体失业？AI夺得绘画大赛冠军，是抢饭碗还是开启艺术新纪元……
+                                </p>
+                            </div>
+                        </div>
+                        <!-- 第一张幻灯片  结束 -->
+
+                        <!-- 第二张幻灯片  开始-->
+                        <div class="slide">
+                            <img class="image" src="images/新闻资讯/主页/汉字传承.jpg" alt="东京" />
+                            <div class="content">
+                                <p class="description">
+                                    让汉字艺术在创新中传承——寿光仓颉汉字艺术馆见闻和思考
+                                </p>
+                            </div>
+                        </div>
+                        <!-- 第二张幻灯片  结束 -->
+
+                        <!-- 第三张幻灯片  开始 -->
+                        <div class="slide">
+                            <img class="image" src="images/新闻资讯/主页/墨.jpg" alt="纽约" />
+                            <div class="content">
+                                <p class="description">
+                                    览翰墨风华 感书圣风骨 ——记“世间遗迹犹龙腾——王羲之与《十七帖》特展”
+                                </p>
+                            </div>
+                        </div>
+                        <!-- 第三张幻灯片  结束 -->
+
+                        <!-- 控制按钮 -->
+                        <div id="prev"><img src="images/图标/左.png" width="50px" alt="左滑动"></div>
+                        <div id="next"><img src="images/图标/右.png" width="50px" alt="右滑动"></div>
+                    </div>
+                </header>
+
+            </div>
+
+            <header>
+                <div class="row">
+                    <h3 id="title" style=" margin-left:-50px;font-family: 等线;">&nbsp快讯</h3><hr/>
+                    <ul>
+                        <li><a href="#"># 绘画会被AI替代吗？ #</a></li>
+                        <li><a href="#">献礼二十大“礼赞新时代”主题创作暨天津美术学院十年科研(创作)成果展开幕</a></li>
+                        <li><a href="#">溪云书画院第三届“开笔礼”仪式在北京举行</a></li>
+                        <li><a href="#">当代篆隶书法艺术的一座高峰——论沙曼翁的篆隶书法艺术</a></li>
+                        <li><a href="#">一场可园精品展，半部近代美术史</a></li>
+                        <li><a href="#">“与时代同行，是当代文艺家的使命与责任”</a></li>
+                        <li><a href="#">如何看待国际视野下的中国当代水墨热？</a></li>
+                        <li><a href="#">杭州纤维艺术三年展开展：寻找艺术中的“缓存空间”</a></li>
+                        <li><a href="#">生息—韦宗尧、主玛·以赛尔曼、张帆作品在798成当代艺术中心展出</a></li>
+                        <li><a href="#">西藏传统文化艺术展在北京开幕 三百余件（套）展品展示藏地文化</a></li>
+
+                    </ul>
+                </div>
+            </header>
+        </div>
+
+        <div class="parcel">
+            <center class="containerBox">
+                <!--左边开始-->
+                <div class="leftCase">
+                    <!--视频开始-->
+                    <div class="mp4">
+                        <div class="Box-1">
+                            <div class="pag-box">
+                                <div class="VdoBx">  <!--视频-->
+                                    <video autoplay loop muted="" preload
+                                           src="images/视频/1.mp4"
+                                           controls="controls" width="300px" class="video" ></video>
+                                </div>
+                                <div class="Ptext"><!--文字-->
+                                    <p>何以中国——循木造形</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="Box-1">
+                            <div class="pag-box">
+                                <div class="VdoBx">  <!--视频-->
+                                    <video  autoplay loop muted="" preload src="images/视频/2.mp4"
+                                           controls="controls" width="300px" class="video" ></video>
+                                </div>
+                                <div class="Ptext"><!--文字-->
+                                    <p>何以中国——天圆地方</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="Box-1">
+                            <div class="pag-box">
+                                <div class="VdoBx">  <!--视频-->
+                                    <video  autoplay loop muted="" preload src="images/视频/3.mp4"
+                                           controls="controls" width="300px" class="video" ></video>
+                                </div>
+                                <div class="Ptext"><!--文字-->
+                                    <p>何以中国——苏绣流芳</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--视频结束-->
+
+                    <!--新闻资讯   开始-->
+                    <div class="NewBox">
+                        <div class="contentNew">
+
+                            <!--第一则-->
+                            <div class="NewOne">
+                                <div class="imageII"> <img src="images/新闻资讯/主页/香港拍卖.png" /> </div>
+                                <div class="textII">
+                                    <h3 class="ShangII">香港艺术品秋拍：亿元拍品重回</h3>
+                                    <p ><a href="#">澎湃新闻获悉，中国嘉德、苏富比拍卖近日分别完成了2022年香港艺术品秋拍的线下拍卖（部分线上拍卖仍在持续）。</a> </p>
+                                    <div class="date">
+                                        <span>admin</span>
+                                        &nbsp&nbsp&nbsp&nbsp<span>date:  2022-10-12</span>
+                                        &nbsp&nbsp&nbsp&nbsp<span>来源：澎湃新闻</span>
+                                    </div>
+
+                                </div>
+                                <div class="rowLink"></div>
+                            </div>
+
+                            <!--第二则-->
+                            <div class="NewOne">
+                                <div class="imageII"> <img src="images/新闻资讯/主页/文化交流.jpg" /> </div>
+                                <div class="textII">
+                                    <h3 class="ShangII">“中国广东非物质文化遗产交流展”东京开幕</h3>
+                                    <p ><a href="#">据广东省文化和旅游厅18日消息，为纪念中日邦交正常化50周年，
+                                        “匠心南粤美美与共——中国广东非物质文化遗产交流展”当日在日本东京中国文化中心开幕。</a> </p>
+                                    <div class="date">
+                                        <span>admin</span>
+                                        &nbsp&nbsp&nbsp&nbsp<span>date:  2022-10-12</span>
+                                        &nbsp&nbsp&nbsp&nbsp<span>来源：澎湃新闻</span>
+                                    </div>
+                                </div>
+                                <div class="rowLink"></div>
+                            </div>
+                            <!--第三则-->
+                            <div class="NewOne">
+                                <div class="imageII"> <img src="images/新闻资讯/主页/薪火相传.jpg" width="100%" /> </div>
+                                <div class="textII">
+                                    <h3 class="ShangII">薪火传承——关于书法学科建设的思考</h3>
+                                    <p ><a href="#">书法是中华民族优秀传统文化的代表，凝结着华夏民族独特的审美意识和艺术精神，在古代社会既承载着施教化、传文明的使命，
+                                        也是文人士大夫修养身心、完善人格的重要手段，正所谓“同流天地，翼卫教经”。</a> </p>
+                                    <div class="date">
+                                        <span>admin</span>
+                                        &nbsp&nbsp&nbsp&nbsp<span>date:  2022-10-12</span>
+                                        &nbsp&nbsp&nbsp&nbsp<span>来源：澎湃新闻</span>
+                                    </div>
+                                </div>
+                                <div class="rowLink"></div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!--新闻资讯   结束-->
+
+                </div>
+                <!--左边结束-->
+
+
+                <!--右边开始-->
+                <div class="rightCase">
+                    <header>
+                        <div class="row">
+                            <h3 id="titleT">&nbsp新知</h3>
+                            <ul>
+                                <li><a href="#">献礼二十大“礼赞新时代”主题创作暨天津美术学院十年科研(创作)成果展开幕</a></li>
+                                <li><a href="#">溪云书画院第三届“开笔礼”仪式在北京举行</a></li>
+                                <li><a href="#">当代篆隶书法艺术的一座高峰——论沙曼翁的篆隶书法艺术</a></li>
+                                <li><a href="#">如何看待国际视野下的中国当代水墨热？</a></li>
+                                <li><a href="#">杭州纤维艺术三年展开展：寻找艺术中的“缓存空间”</a></li>
+                                <li><a href="#">生息—韦宗尧、主玛·以赛尔曼、张帆作品在798成当代艺术中心展出</a></li>
+                                <li><a href="#">西藏传统文化艺术展在北京开幕 三百余件（套）展品展示藏地文化</a></li>
+                            </ul>
+                        </div>
+                    </header>
+
+                    <div class="Qiong">
+                        <div class="Le">
+                            <h3 id="" style="border-bottom:1px dashed rgba(0, 0, 0, 0.2);margin-top: 30px; color: darkslategrey;">&nbsp作品</h3>
+                            <div class="Lei" style="margin-top: 20px;"><a onclick="window.open('images/新闻资讯/主页/风景.jpg')"  >
+                                有序的风景·天高云淡
+                                <img src="images/新闻资讯/主页/风景.jpg" width="100%" />
+                            </a>
+                            </div>
+                            <div class="Lei" style="margin-top: 20px;"><a onclick="window.open('images/新闻资讯/主页/大色彩.jpg')">
+                                大色块色彩
+                                <img src="images/新闻资讯/主页/大色彩.jpg" width="100%" />
+                            </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--右边结束-->
+
+            </center>
+        </div >
+<!--        <div class="end">-->
+<!--            &lt;!&ndash;结尾视频&ndash;&gt;-->
+<!--            <div class="endVideo">-->
+<!--                <video autoplay loop muted="" preload>-->
+<!--                    <source src="images/视频/时代画卷.mp4">-->
+<!--                </video>-->
+<!--            </div>-->
+
+        </div>
+    </div>
+
+</div>
+<div class="Below-Box" style="background-color:rgb(229,223,219);display: flex;float: bottom;margin-top: 1500px;opacity: 0.5;"><!--授权说明-->
+    <div class="row">
+        <div class="col-12" style="margin-left: 30%;width: 100%;">
+            <div >
+                作品来源于网络，仅供学习鉴赏使用，
+                图片版权归原作者或原照片所有者或原出版社所有，如有冒犯或侵权,敬请联系删除。 &nbsp;|&nbsp;版权所有:******
+            </div>
+            <div style="margin-left: 30%;">
+                ©Copyright of frame design is reserved in 2022.
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 引入JS -->
+<script type="text/javascript" src='javascripts/News/News.js'></script>
+
+</body>
+
+</html>

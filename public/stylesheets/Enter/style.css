@@ -1,0 +1,292 @@
+@charset "utf-8";
+.container {
+  width: 100vw;
+  height: 100vh;
+  /*background: url("/images/写实/2.jpg") no-repeat;*/
+  /*background-size:cover;*/
+}
+
+.p-box{
+  font-size: 30px;
+  text-align: left;
+  height: 50px;
+  color: #3c3c3c;
+  background-color:rgba(255,255,255,0.8);
+  opacity: 0.8;
+}
+
+.title{
+  font-family:Blackadder ITC;
+  text-align: center;
+  line-height:50px;
+  opacity: 1;
+}
+
+.title2{
+  font-family:华文宋体;
+  margin-left: 20px;
+  font-size: 20px;
+  color:#00B7FF;
+  text-align: center;
+  line-height:50px;
+  opacity: 1;
+}
+
+.title2:hover{
+  color:#695cfe;
+  boder-width: 35px;
+  background-color:#FFFFFF;
+  border-radius: 12px;
+}
+
+.logo{
+  margin-left: 20px;
+  margin-top: 5px;
+  float: left;
+}
+
+.num{
+  float: right;
+  margin-top: -20px;
+}
+
+.box{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform:translate(-50%,-50%) ;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  width:600px;
+  color:#FFF;
+  background-color:rgba(255,255,255,0.2);/*背景颜色以及透明度*/
+  border-top:1px solid rgba(255,255,255,0.5);
+  border-left:1px solid rgba(255,255,255,0.5);
+  border-bottom:1px solid rgba(204,204,204,0.2);
+  border-right:1px solid rgba(204,204,204,0.2);
+  backdrop-filter: blur(10px);/*设置背景模糊*/
+}
+
+.error{
+  color:red;
+}
+.box > h2{
+  color:rgba(255, 255, 255, 0.9);
+  margin-top:30px;/*设置下边距*/
+  margin-bottom:20px;/*设置下边距*/
+  color:#FFF;
+}
+
+.input-box{
+  display:flex;
+  flex-direction:column;
+  align-items:start;
+  justify-content:center;/*在弹性盒对象的 <div> 元素中的各项周围留有空白*/
+  margin-bottom:10px;
+}
+
+.input-box > label{
+  margin-bottom:5px;
+  color:rgba(255,255,255,0.9);
+  font-size:13px;
+}
+
+.input-box > input{/*加粗输入框*/
+  box-sizing:border-box;
+  color:rgba(255,255,255,0.9);
+  font-size:14px;
+  height:35px;
+  width:300px;
+  background:rgba(255,255,255,0.3);
+  border:1px solid rgba(255,255,255,0.5);
+  border-radius:5px;
+  transition:0.2s;/*将鼠标悬停时，实现边框变粗的过渡，过渡时间为0.2s*/
+  outline:none;
+  padding:0 10px;
+}
+
+.input-box > input:focus{
+  border:1px solid rgba(255,255,255,0.8);
+}
+
+.btn-box{
+  width:250px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:start;
+}
+
+.forget{/*登录页面的忘记密码样式*/
+  margin-top: 5px;
+  margin-left: 40px;
+  font-size:13px;
+  text-decoration:none;/*无文本装饰*/
+  color:rgba(255,255,255, 0.9);
+  transition:0.2s;
+  width:250px;
+  text-align:right; /*边距对齐方式*/
+}
+
+/*忘记密码页面的登录注册样式*/
+.click{
+  margin-top: 10px;
+  margin-left: 30px;
+  font-size:13px;
+  text-decoration:none;/*无文本装饰*/
+  color:rgba(255,255,255, 0.9);
+  transition:0.2s;
+  width:250px;
+  text-align:right; /*边距对齐方式*/
+}
+a{
+  font-weight:bold;
+  color: rgba(255,255,255,1);
+  text-decoration:none;
+}
+
+a:hover{
+  color: #e38d13;
+}
+
+.btn-box > a:hover{
+  color:#f0ad4e;
+}
+
+.btn-box > div:nth-child(1){
+  display:flex;
+  flex-direction:row;
+  justify-content:center;
+  align-items:start;
+  margin-top:10px;
+}
+
+.btn-box  > div:nth-child(2){
+  margin-bottom: 30px;
+}
+
+.btn-box > div >input[type=submit]{
+  width:130px;
+  height:40px;
+  font-size:15px;
+  border:1px solid rgba(255,255,255,0.5);
+  background-color:rgba(227,141,19,1);
+  border-radius: 20px;
+  margin-left:30px;
+}
+
+.btn-box > div > a >input[type=submit2]{
+  color:transparent;/*取消文字光标*/
+  text-shadow: 0px 0px 0px #000000;
+  text-align: center;
+  width:130px;
+  height:40px;
+  font-size:15px;
+  border:1px solid rgba(255,255,255,0.5);
+  background-color:rgba(227,141,19,1);
+  border-radius: 20px;
+  margin-left:0px;
+}
+
+.btn-box > div >input[type=submit3]{
+  color:transparent;/*取消文字光标*/
+  text-shadow: 0px 0px 0px #000000;
+  text-align: center;
+  width:200px;
+  height:40px;
+  font-size:15px;
+  border:1px solid rgba(255,255,255,0.5);
+  background-color:rgba(227,141,19,1);
+  border-radius: 20px;
+  margin-right:0px;
+}
+
+.account{/*注册页面的立即登录样式*/
+  margin-top: 5px;
+  margin-left: 20px;
+  font-size:13px;
+  text-decoration:none;/*无文本装饰*/
+  color:rgba(255,255,255, 0.9);
+  transition:0.2s;
+  width:250px;
+  text-align:right; /*边距对齐方式*/
+}
+
+.btn-box > div >input.submit4{
+  color:transparent;/*取消文字光标*/
+  text-shadow: 0px 0px 0px #000000;
+  text-align: center;
+  margin-top: 0px;
+  margin-left: -25px;
+  float: right;
+  width:300px;
+  height:30px;
+  font-size:15px;
+  border:1px solid rgba(255,255,255,0.5);
+  background-color:rgba(227,141,19,1);
+  border-radius: 20px;
+}
+.btn-box > div >input.submit5{
+  color:transparent;/*取消文字光标*/
+  text-shadow: 0px 0px 0px #000000;
+  text-align: center;
+  margin-left: 0px;
+  float: right;
+  width:300px;
+  height:30px;
+  font-size:15px;
+  border:1px solid rgba(255,255,255,0.5);
+  background-color:rgba(227,141,19,1);
+  border-radius: 20px;
+}
+
+/*鼠标悬停登录时的变化*/
+.btn-box > div >input:hover{
+  cursor: pointer;
+  border:1px solid rgba(255,255,255,0.5);
+  background-color:rgba(240,173,78,1);
+}
+
+/*鼠标悬停时注册的变化*/
+.btn-box > div> a >input:hover{
+  cursor: pointer;
+  border:1px solid rgba(255,255,255,0.5);
+  background-color:rgba(240,173,78,1);
+}
+
+/* 底部 */
+.footer{
+  color: rgba(255, 255, 255, 0.5);
+  padding: 2px 40%;
+  background: rgb(61, 61, 61);
+  position: absolute;
+  bottom: 0px;
+}
+.footer.p-text{
+  text-align: left;
+  font-size: 14px;
+}
+/**/
+video {
+  height: 120%;
+  top: 0;
+  left: 0;
+  position: fixed;
+  min-width: 100%;/*设置段落的最小宽度*/
+  z-index: -9999;
+  background-size:cover;
+}
+.video {
+  width:-80%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: fixed;
+  min-width: 100%;
+  min-height: 50%;
+  z-index: -9999;
+  background-size:cover;
+}
+

@@ -1,0 +1,56 @@
+
+.focus{
+    margin-top: 20px;
+    width: 80%;
+    margin-left: 5%;
+    margin-bottom: 70vh;
+    overflow: hidden; /*溢出隐藏*/
+}
+
+.box6{
+    display: flex;
+    position: absolute;
+    z-index: 0;
+
+}
+
+.box1{
+    display: flex;
+    position: absolute;
+    z-index: 1;
+
+}
+
+.box2{
+    position: absolute;
+    z-index: 2;
+
+}
+
+.box3{
+    position: absolute;
+    z-index: 3;
+}
+
+.box4{
+    position: absolute;
+    z-index: 4;
+}
+
+.box5{
+    position: absolute;
+    z-index: 5;
+}
+
+.photoes div > img{
+    object-fit: cover;
+    --offset:0px;
+    /*--offset（水平偏移量）、--blur（模糊度  数值越大越模糊）是css的自定义属性，可通过var函数调用*/
+    --blur:0.5px;
+    /*设置水平偏移量*/
+    transform: translateX(var(--offset));
+    /*设置模糊度*/
+    filter: blur(var(--blur));
+}
+
+

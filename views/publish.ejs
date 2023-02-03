@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="images/图标/LOGO.png" rel="shortcut icon" type="image/x-icon" />
+    <title>用户中心 - 我的作品</title>
+    <!--    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">-->
+    <link rel="stylesheet" href='/stylesheets/bootstrap-theme.min.css'>
+    <link rel="stylesheet" href='/stylesheets/userCenter/public.css'>
+    <link rel="stylesheet" href='/stylesheets/userCenter/collect/publish.css'>
+
+</head>
+<body>
+<div class="container">
+    <div class="main">
+        <div class="select">
+            <span style="margin-top:20px;margin-left:50px;text-align: left;font-size: 20px;font-family:微软雅黑 ;color: #3d3d3d;">已发布商品</span>
+            <button  id="addBtn" class="addBtn">上传</button>
+        </div>
+        <div class="table" >
+            <form id="delete" >
+                <% rawData.forEach(function(item){ %>
+                <div class="form">
+                    <!--                        <div><input type="checkbox" name="hobby" readonly="readonly"/></div>-->
+                    <div class="seller">
+                        <span>卖家:<%= userdata.userName %></span>
+                        <span>电子画</span>
+                    </div>
+                    <div class="GoodsName"><%= item.goodsName %></div>
+                    <div class="goods"><img src=  '<%= item.goods.substring (6) %>'  alt="图片" class="" /></div>
+                    <div class="explain"><%= item.explain %></div>
+                    <div name="quantity">
+                        <div class="plussub" id="plussub" >
+                            数量：
+                            <input readonly="readonly" name="quantity" class="quantity" id="quantity" type="text" value="<%= item.quantity %>">
+                        </div>
+                    </div>
+                    <div class="price">￥<%= item.price %>  </div>
+<!--                    <div class="date"><%= item.date %> </div>-->
+                    <!--                        <div> </div>-->
+                    <ul class="operate">
+                        <li>
+                            <span class="delete" data-id="`<%= item.id %>`">删除</span>
+                        </li>
+                        <li>
+                            <span  class="detail">查看详情</span>
+                        </li>
+                    </ul>
+                </div>
+                <% }) %>
+            </form>
+        </div>
+    </div>
+    <p style="margin-bottom:20px;text-align: center;font-size: 18px;font-family:'微软雅黑 Light';color: grey;">没有更多了...</p>
+</div>
+
+<!--上传弹窗-->
+<div class="dialog isDialog">
+    <div class="dialog-wrap isDialog" style="border: 1px solid rgba(128,128,128,0.5);"  >
+        <div class="dialog-header">
+            <h3>上传作品</h3>
+            <div class="close" >
+                <img src="/images/图标/取消.png" class="close" width="30px"  alt="">
+            </div>
+        </div>
+        <form  action="" method="post" enctype="multipart/form-data" >
+            <div >
+                <div class="work-name">
+                    <label >商品名称:</label>
+                    <input type="text" class="form-control" id="worksName " name="goodsName"/>
+                </div>
+                <div class="work-Explain">
+                    <label>商品描述:</label>
+                    <input type="text" class="form-control" id="Author" name="Explain" />
+                </div>
+                <div class="work-Explain">
+                    <label>设置单价:</label>
+                    <input type="text" class="form-control" id="price" name="price" />
+                </div>
+            </div>
+            <div class="work-file">
+                <label>选择商品图:</label>
+                <input type="file" name="goods" value="" class="upload-input" id="unloadInput" @change="fileUpload" />
+            </div>
+            <div class="dialog-footer">
+                <span class="cancel">取消</span>
+                <input  type="submit" class="determine" value=" 确定上传" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<!--删除弹窗-->
+<form action="/publish-del" method="get" class="isDelete" id="isDelete">
+    <div class="Dialog "></div>
+    <div class="dialog-wrap ">
+        <div class="dialog-header">
+            <h4>是否确定删除？ </h4>
+            <input type="text" id="id" name="id" style="visibility:hidden;" />
+            <div class="closer" >
+                <img src="/images/图标/关闭26.png" class="close" width="30px"  alt="">
+            </div>
+            <div class="dialog-footer">
+                <span class="cancel">取消</span>
+                <button class="determine determineDel">确定</button>
+            </div>
+        </div>
+    </div>
+</form>
+</div>
+</body>
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script src="/javascripts/jquery.js"></script>
+<script>
+    $(function (){
+    var id ='';
+    //打开添加窗口
+    $('#addBtn').click(function (){
+        $('.isDialog').show();
+    })
+    //关闭添加窗口
+    $('.close,.cancel').click(function (){
+        $('.isDialog').hide();
+    })
+    // })
+        //打开删除弹窗
+        $('.delete').click(function (){
+            id = $(this).data('id');
+            id = id.match(id)[0].replace("`","").replace("`","");
+            console.log('id',id);
+            $('.isDelete').show();
+        })
+        //关闭删除窗口
+        $('.closer,.cancel').click(function (){
+            $('.isDelete').hide();
+        })
+        $('.determineDel').click(function (){
+            window.location.href= `/publish-del?id=${id}`;
+
+            // let strippedTitle = num.substring(0, num.indexOf(" s:"));
+        })
+
+    })
+    //关闭添加窗口
+    // $('.close,.cancel').click(function (){
+    //     $('.isDelete').hide();
+    // })
+
+</script>
+</html>

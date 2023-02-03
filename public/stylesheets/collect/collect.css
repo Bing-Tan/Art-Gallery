@@ -1,0 +1,268 @@
+*{
+    font-family: 獅尾骨腿黑體SC-Light;
+    margin: 0;
+    padding: 0;
+    /*设置字间距*/
+    Letter-spacing:1px;
+}
+
+li{
+    list-style: none;
+}
+a{
+    /*text-decoration: none;*/
+    color: #4e413b;
+    text-decoration: none;
+}
+
+body{
+    background: url(../img/bg.png) no-repeat;
+    background-size: cover;    /* 设置背景自适应 */
+}
+
+/* 导航栏 */
+/* 导航栏上侧 */
+.header-top{
+    background: #d00000;
+    width: 100%;
+    height: 80px;
+}
+/* 顶部内容区 */
+.header-top-f{
+    width: 1200px;
+    margin: auto;
+}
+.header-top-f img{
+    float: left;
+    height: 50px;
+    margin-top: 15px;
+}
+/* 导航区域 */
+.header{
+    background: rgb(229, 223, 219);
+    height: 50px;
+    line-height: 50px;
+}
+.header ul{
+    width: 1200px;
+    margin: auto;   /* 居中显示 */
+}
+.header ul li{
+    display: inline-block; /* 设置为行内块级元素 */
+}
+/* 导航栏内的a标签 */
+.header ul li a{
+    display: block;
+    padding: 0 40px;
+    color: #666666;
+}
+/* 设置class为active 下的a */
+.header ul .active a{
+    border-bottom: 3px solid rgb(136,98,112);
+    /*background: #ffc58c;*/
+}
+.header ul li a:hover{
+    color: rgb(45, 45, 45);
+    text-decoration: none;
+    background: #ffffff;
+}
+/* 轮播图 */
+.swiper {
+    position: relative;
+    width: 90%;
+    height: 350px;
+    margin: 20px auto;    /* 上外边距0 左右居中 下外边距为20 */
+    overflow: hidden;
+}
+.wrap {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+.warp ul {
+    position: absolute;
+}
+.wrap ul li {
+    width: 100%;
+    height: 100%;
+}
+.wrap ul li img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;/* 保留图片原尺寸*/
+    border-radius: 3px;
+}
+/* 底部下标 */
+.wrap ol {
+    position: absolute;
+    right: 5%;
+    bottom: 20px;
+}
+.wrap ol li {
+    list-style: none;  /*取消默认样式*/
+    height: 10px;
+    width: 10px;
+    border: 1px solid #FFF;
+    border-radius: 50%;
+    margin-left: 12px;
+    float: left;
+    cursor: pointer;
+    font-size: 0px;    /* 隐藏下标文字 */
+}
+.wrap ol .on {
+    background: #f0d9c3;
+}
+/* 栏目标题 */
+.title{
+    width: 1200px;
+    margin: auto;
+}
+.title h3{
+    margin-top: 50px;
+    font-size: 22px;
+    font-weight: bold;
+    font-family: '獅尾骨腿黑體SC-Light';
+    letter-spacing: 2px; /* 字间距 */
+}
+/*商品设置*/
+.shop{
+    width: 90%;
+    /*height: 180vh;*/
+    margin: auto;    /* 居中显示 */
+    background: #FFFFFF;
+    /*padding: 20px;*/
+    /*margin-bottom: 50px;*/
+    border-radius: 10px;
+    /*border: 1px solid #3c3c3c;*/
+    /*position: absolute;*/
+    overflow: hidden;
+    padding-bottom: 50px;
+}
+/*商品列表*/
+.shop ul{
+    width: 100%;
+    /*height: 200vh;*/
+    position: relative;
+}
+/*商品内列设置*/
+.shop ul li{
+    float: left;
+    width: 280px;
+    height:420px;
+    background: rgba(229, 223, 219, 0.3);
+    /*padding: 20px;*/
+    border-radius: 10px;
+    margin-left: 50px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    overflow: hidden;
+}
+.a{
+    position:absolute;
+    z-index: 999;
+    width:280px;
+    height:420px;
+    margin: 0;
+    /*background-color: #d9534f;*/
+
+}
+.a:hover{
+    cursor: pointer;
+    border-radius: 10px;
+    border: 1px solid rgba(94, 94, 94, 0.45);
+}
+/*商品图片*/
+.shop ul li img{
+    width: 100%;
+    height: 250px;
+    padding: 20px;
+
+    object-fit: cover;    /* 图片防压缩 */
+}
+.shop ul li div{
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+/*商品标题*/
+.shop h4{
+    padding-left: 20px;
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 1.6;
+    color: #111;
+}
+/*商品说明*/
+.shop .em{
+    width: 100%;
+    height: 60px;
+    padding:5px 10px;
+    color: #666;
+    font-family: 獅尾骨腿黑體SC-Light;
+    /*text-align: center;*/
+    font-size: 8px;
+    /*设置首行缩进2字符*/
+    Text-indent:2em;
+    overflow: hidden;
+    /*超出显示省略号*/
+    text-overflow:ellipsis;
+    /*border: 1px solid rgba(116, 116, 116, 0.25);*/
+}
+/*商品价格*/
+.shop p{
+    color: #d9534f;
+    font-size: 20px;
+    display: flex;
+    float: right;
+    padding-right: 20px;
+
+    /*padding-left: 250px;*/
+}
+/* 收藏按钮 */
+.myCar{
+    color: #FFFFFF;
+    width: 80px;
+    padding:0 25px;
+    height: 30px;
+    display: flex;
+    float: left;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    background-color:  rgb(136,98,112);
+}
+.myCar:hover{
+    background-color: rgba(136, 98, 112, 0.89);
+}
+/* 购买按钮 */
+.buy{
+    color: #FFFFFF;
+    padding:0 20px;
+    height: 30px;
+    display: flex;
+    float: right;
+    margin-left: 50px;
+    border: none;
+    border-radius: 5px;
+    background-color:  rgb(136,98,112);
+}
+.buy:hover{
+    cursor: pointer;
+    background-color: rgba(136, 98, 112, 0.89);
+}
+
+/* 底部 */
+.footer{
+    height: 40px;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(221, 221, 221, 0.81);
+    position: fixed;
+    bottom: 0;
+}
+
+
+
+
+

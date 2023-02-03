@@ -1,0 +1,141 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="images/图标/LOGO.png" rel="shortcut icon" type="image/x-icon" />
+    <title>账号注册页面</title>
+    <script type="text/javascript" src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
+    <script src="https://static.runoob.com/assets/jquery-validation-1.14.0/lib/jquery.js"></script>
+    <script src="https://static.runoob.com/assets/jquery-validation-1.14.0/dist/jquery.validate.min.js"></script>
+    <script src="https://static.runoob.com/assets/jquery-validation-1.14.0/dist/localization/messages_zh.js"></script>
+
+
+    <link rel='stylesheet' href='stylesheets/Enter/public.css' />
+    <link rel='stylesheet' href='stylesheets/Enter/style.css' />
+    <style type="text/css">
+    </style>
+</head>
+
+<body>
+    <header>
+        <p class="p-box">
+            <img src="images/图标/LOGO2.png" height="40px" alt="logo" class="logo">
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <span class="title">Art Research Institute</span>
+
+            <img src="images/图标/电话咨询.png"height="80px" alt="联系电话 | 400-999-8888" class="num">
+        </p>
+
+    </header>
+
+    <form id = "registerform" name = "form1" method="post" action="/register">
+        <div class="box" height="">
+            <h2>注册页面</h2><br />
+            <div class="input-box">
+<!--                <label for="userNum"></label>-->
+                <input type="text" placeholder="请输入手机号" id="userNum" name="userNum"/><br />
+            </div>
+            <div class="input-box">
+<!--                <label for="userName"></label>-->
+                <input type="text" placeholder="用户名" name="userName" id="userName"  /><br />
+            </div>
+            <div class="input-box">
+                <input type="password"  placeholder="请输入密码"   name="userPwd" id="userPwd"  /><br />
+            </div>
+            <div class="input-box">
+                <input type="password" placeholder="请确认密码"  name="reuserPwd" id="reuserPwd"  />
+            </div>
+
+            <div class="btn-box">
+
+
+                <div class="denglu">
+                    <input class="submit4"  type="submit" value="点击注册" name="mistake" id="login">
+                </div>
+                <p class="account">已有账户？<a href="/Enter">点击登录</a></p></br>
+
+            </div>
+        </div></form>
+    <!-- 底部 -->
+    <div class="footer">
+        <!-- 文字 -->
+        <p class="p-text">©Copyright of frame design is reserved in 2022.</p>
+    </div>
+
+    <video autoplay loop muted="" preload>
+        <source src="/images/register.mp4">
+    </video>
+
+    <script type="text/javascript">
+
+        function randoms()
+        {
+            var number=Math.random();
+            document.getElementById("userName").value = "";
+            document.getElementById("userNum").value = "";
+            document.getElementById("reuserPwd").value = "";
+            document.getElementById("userPwd").value = "";
+        }
+
+        //参考链接：https://www.runoob.com/try/try.php?filename=jquery_validate_demo1
+        //添加检测机制 参考链接：https://blog.csdn.net/huangleijay/article/details/11569317
+        jQuery.validator.addMethod("mobile", function(value, element) {
+            var length = value.length;
+            var mobile = /^(((13)|1[5-9]{1})+\d{9})$/
+            return this.optional(element) || (length == 11 || mobile.test(value));
+        }, "手机号码格式错误");
+
+        // 字母和数字的验证
+        jQuery.validator.addMethod("chrnum", function(value, element) {
+            var chrnum = /^([a-zA-Z0-9]+)$/;
+            return this.optional(element) || (chrnum.test(value));
+        }, "只能输入数字和字母(字符A-Z, a-z, 0-9)");
+
+        $().ready(function() {
+            // 在键盘按下并释放及提交后验证提交表单
+            $("#registerform").validate({
+                rules: {
+                    userName: "required",//用户名
+                    //密码是6位以上
+                    userPwd: {
+                        required: true,
+                        minlength:6,
+                        maxlength:10,
+                        chrnum: true
+                    },
+                    //验证密码
+                    reuserPwd: {
+                        required: true,
+                        chrnum: true,
+                    },
+                    //手机号
+                    userNum: {
+                        required: true,
+                        mobile:true
+                    },
+                },
+                messages: {
+                    userName: "请输入您的用户名",
+                    userPwd: {
+                        required: "请输入6~10位密码",
+                        minlength: "请输入6~10位密码",
+                        maxlength:"请输入6~10位密码"
+                    },
+                    reuserPwd: {
+                        required: "请确认密码"
+                    },
+                    userNum:
+                        {
+                            required: "请输入一个正确的手机号"
+                        }
+                }
+            });
+        });
+
+    </script>
+
+</body>
+
+
+
+</html>

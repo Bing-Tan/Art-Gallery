@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link href="images/图标/LOGO.png" rel="shortcut icon" type="image/x-icon" />
+    <title></title>
+<!--    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>-->
+<!--    <script src="https://static.runoob.com/assets/jquery-validation-1.14.0/lib/jquery.js"></script>-->
+
+    <script src="https://static.runoob.com/assets/jquery-validation-1.14.0/lib/jquery.js"></script>
+    <script src="https://static.runoob.com/assets/jquery-validation-1.14.0/dist/jquery.validate.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel='stylesheet' href='https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css'><!--顶部样式调用-->
+    <link rel="stylesheet" href='/stylesheets/bootstrap-theme.min.css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/works/comment.css"/>
+    <link rel="stylesheet" type="text/css" href="stylesheets/works/public.css"/>
+
+
+</head>
+
+
+
+<body>
+
+<div class="search">
+    <div class="container">
+        <div class="top" >
+            <div class="left">
+                <div class="head">
+                   <a>
+                       <img src="<%= acer.ImgUrl.substring (6) %>" width="100px" />
+                   </a>
+                </div>
+                <span>未关注</span>
+            </div>
+            <div class="right">
+                <div>
+                    <span><%= acer.userNum %></span>
+                    <span><%= acer.userName %></span>
+                    <a>
+                        <span style="font-size: 10px;">(一共已发表<%= Leg %>个作品)</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="middle">
+            <div class="worksImg" >
+                <img src="<%= user.ImgUrl.substring (6) %>">
+            </div>
+
+            <div class="describe">
+                <h4><%= user.worksName %></h4>
+                <p><%= user.Explain%> </p>
+            </div>
+        </div>
+        <div class="bottom">
+<!--            <a class="comment">-->
+<!--                <img src="images\图标\评论.png" width="30px">-->
+<!--                <span >评论详情</span>-->
+<!--            </a>-->
+            <div class="function">
+                <div class="share">
+                    <img src="images\图标\分享.png" width="30px">
+                    <p>分享</p>
+                </div>
+                <div class="share">
+                    <img src="images\图标\收藏.png" width="30px">
+                    <p>收藏</p>
+                </div>
+                <div class="share">
+                    <img src="images\图标\点赞.png" width="30px">
+                    <p>点赞</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="comment">
+            <div class="works">
+                <div class="detail">
+                    <span>评论详情</span>
+                </div>
+                <% comment.forEach(function(item,index){ %>
+                <div class="two">
+                    <div class="photo">
+                        <a>
+                            <img src="<%= userData[index].item.substring (6) %>" width="100px" />
+                        </a>
+                    </div>
+                    <div class="information">
+                        <span><%= userData[index].itemDesc %></span>
+                        <div class="explain">
+                            <p><%= item.contain%></p>
+                        </div>
+                        <div style="margin-top:5px;margin-left: 75%;font-size: 10px;color: grey;">
+                            <span><%= item.date%>&nbsp; <%= item.time%></span>
+                            <span>回复</span>
+                        </div>
+                    </div>
+                </div>
+                <% }) %>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--返回顶部-->
+<button onclick="topFunction()" id="Totop" title="回顶部">
+    <img src="images/图标/回到顶部.png" width="20px" height="20px" />
+    <p>顶部 </p>
+</button>
+
+<!--授权说明-->a
+<form id="footer" class="footer" action="" method="post">
+    <input class="content" type="text" name="content" placeholder="说点什么吧..."  />
+    <input class="submit" type="submit" value="发送"  />
+</form>
+
+</body>
+
+<script type="text/javascript" src='javascripts/index/Totop.js'></script>
+<script type="text/javascript">
+    $().ready(function() {
+        // 在键盘按下并释放及提交后验证提交表单
+        $("#footer").validate({
+            rules: {
+                //输入内容
+                content: {
+                    required: true,
+                    minlength:1,
+                    // maxlength:10,
+                    chrnum: true
+                }
+            },
+            messages: {
+                content: {
+                    required: "内容不能为空",
+                    minlength: "内容不能为空",
+                }
+            }
+        });
+    });
+    // document.cookie = "username=abc; age=23";
+    var arr1 = document.cookies;
+    var arrcookie = arr1.split("; ");
+    console.log('cookie',arrcookie);
+    for(var i = 0; i < arr1.length; i++){
+        var arr2 = arr1[i].split('=');
+
+        if(arr2[0] == 'account'){
+            // alert(arr2[1]);
+            console.log('cookie',arr2[1]);
+        }
+    }
+    // function getcookie(account){//获取指定名称的cookie的值
+    //     var arrstr = document.cookie;
+    //     console.log('cookie',arrstr);
+        // for(var i = 0;i < arrstr.length;i ++){
+        //     var temp = arrstr[i].split("=");
+        //     if(temp[0] == account) return unescape(temp[1]);
+        //     console.log('cookie',temp);
+        // }
+    // }
+
+</script>
+</html>

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link href="images/图标/LOGO.png" rel="shortcut icon" type="image/x-icon" />
+    <title>艺术新闻 - 展讯</title>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="stylesheets/News/gallery.css">
+    <link rel="stylesheet" href="stylesheets/News/News.css">
+
+    <style type="text/css">
+    </style>
+</head>
+<body>
+
+<div>
+    <nav class="" id="nav">
+        <ul class="nav nav-tabs" >
+            <li class="left">
+                <img class="LOGO" src="images/图标/LOGO2.png" width="60px" class="glyphicon" /><span></span><span class="wenzi ">&nbsp Art Research Institute</span><!--左标签-->
+                <span> &nbsp &nbsp <img class="phone" src="images/图标/电话咨询.png" width="230px" class="glyphicon" /></span>
+            </li>
+
+            <!--首页开始-->
+            <li style="padding-top: 8px;" ><a onclick="window.open('/index')"><span><img src="images/图标/home.png" width="20px" class="Icon" /></span>&nbsp;&nbsp;首页 </a></li>
+            <li style="padding-top: 8px;" class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#" >作品赏析 <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a  href="Western"><span><img src="images/图标/Western.png" width="20px" class="Icon" /></span>&nbsp;&nbsp;西方名画</a></li>
+                    <li><a  href="Chinese"><span><img src="images/图标/Chinese.png" width="20px" class="Icon" /></span>&nbsp;&nbsp;国内名画</a></li>
+                    <li><a  href="userWorks"><span><img src="images/图标/userworks.png" width="20px" class="Icon" /></span>&nbsp;&nbsp;当代画作</a></li>
+                    <li class="divider"></li>
+                    <li><a href="/works">&nbsp&nbsp全部作品</a></li>
+                </ul>
+            </li>
+
+            <li style="padding-top: 8px;" class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#" >美术史 <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="Whistory"><span><img src="images/图标/Westernwork.png" width="20px" class="Icon" /></span>&nbsp;&nbsp;西方绘画史</a></li>
+                    <li><a href="Chistory"><span><img src="images/图标/Chinesework.png" width="20px" class="Icon" /></span>&nbsp;&nbsp;国内绘画史</a></li>
+                </ul>
+            </li>
+
+            <li style="padding-top: 8px;" ><a href="/News"><span><img src="images/图标/New.png" width="20px" class="Icon" /></span>&nbsp;&nbsp;艺术新闻 </a></li>
+            <li style="padding-top: 8px;" ><a href="/collect"><span ><img src="images/图标/collect.png" width="20px" class="Icon" /></span>&nbsp;&nbsp;电子收藏 </a></li>
+            <li style="padding-top: 8px;" ><a onclick="window.open('/Enter')"><span> <img src="images/图标/user.png" width="20px" class="Icon" /></span>&nbsp;&nbsp;登录/注册 &nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+
+        </ul>
+
+
+        <!--            /*新闻主页导航栏*/-->
+        <ul class="navigation" >
+            <li ><a href="/News">主页</a></li>
+            <li ><a href="/NewPage">新闻</a></li>
+            <li class="active" ><a href="/gallery">展讯</a></li>
+        </ul>
+    </nav>
+</div>
+
+
+<!--内容部分-->
+<div class="container">
+    <div class="row">
+        <!--左边当前展览  开始-->
+        <div class="capacity">
+            <h3 >当前展览</h3>
+        <div class="containerLeft">
+            <input type="radio" name="tabs" id="tab_top" checked>
+            <input type="radio" name="tabs" id="tab_middle">
+            <input type="radio" name="tabs" id="tab_bottom">
+            <div class="cube">
+                <div class="tab-content">
+                    <a href="#"><img src="http://exhibit.meishujia.cn/user/4075/upload/22-11-02/1667366388_6644_afile.png" width="100%" /></a>
+                    <p>展览名称：胖子-牟柏岩新作展</p>
+                </div>
+                <div class="tab-content">
+                    <a href="#"><img src="http://news.meishujia.cn/user/4075/upload/22-11-02/1667347486_3888_afile.jpeg" width="100%" /></a>
+                    <p>展览名称：“紫禁之巅·皇都揽胜”</p>
+                </div>
+                <div class="tab-content">
+                    <a href="#"><img src="http://exhibit.meishujia.cn/user/4075/upload/22-11-02/1667366533_3973_afile.jpg" width="100%" /></a>
+                    <p>展览名称：与钱无关：登陆元宇宙</p>
+                </div>
+            </div>
+            <div class="labels">
+                <label for="tab_top" class="tab">first</label>
+                <label for="tab_middle" class="tab">second</label>
+                <label for="tab_bottom" class="tab">third</label>
+            </div>
+        </div></div><!--左边当前展览  结束-->
+
+        <!--右边展讯  开始-->
+        <div class="containerRight">
+            <div class="table">
+                <h4>展览活动</h4>
+                <ul>
+                    <a href="#" ><li style="width: 70%; overflow: hidden;white-space:nowrap;">
+                        首届广东综合材料绘画研究展在宝安举办</li></a>
+                    <span style="display: flex;float: right; margin-top: -20px;">2022/11/02</span>
+
+                    <a href="#" ><li style="width: 70%; overflow: hidden;white-space:nowrap;">
+                        刘京版画作品展长沙开展 带大众领略文人风骨</li></a>
+                    <span style="display: flex;float: right; margin-top: -20px;">2022/11/02</span>
+
+                    <a href="#" ><li style="width: 70%; overflow: hidden;white-space:nowrap;">
+                        山西展出240余件跨越百万年文物 追溯中华文明起源</li></a>
+                    <span style="display: flex;float: right; margin-top: -20px;">2022/11/02</span>
+
+
+                    <a href="#" ><li style="width: 70%; overflow: hidden;white-space:nowrap;">
+                        “云梦之境——陆永安艺术展”亮相中国美术馆</li></a>
+                    <span style="display: flex;float: right; margin-top: -20px;">2022/11/02</span>
+                </ul>
+                <ul>
+                    <a href="#" ><li style="width: 70%; overflow: hidden;white-space:nowrap;">
+                        国家艺术基金“传统灯工玻璃创新人才培养”项目成果展亮相天津</li></a>
+                    <span style="display: flex;float: right; margin-top: -20px;">2022/11/01</span>
+
+                    <a href="#" ><li style="width: 70%; overflow: hidden;white-space:nowrap;">
+                        新时代的“山河新貌”</li></a>
+                    <span style="display: flex;float: right; margin-top: -20px;">2022/11/01</span>
+
+                    <a href="#" ><li style="width: 70%; overflow: hidden;white-space:nowrap;">
+                        立足高原　再创高峰</li></a>
+                    <span style="display: flex;float: right; margin-top: -20px;">2022/11/01</span>
+
+
+                    <a href="#" ><li style="width: 70%; overflow: hidden;white-space:nowrap;">
+                        笔墨现精神　丹青证时代</li></a>
+                    <span style="display: flex;float: right; margin-top: -20px;">2022/11/01</span>
+                </ul>
+                <ul>
+                    <a href="#" ><li style="width: 70%; overflow: hidden;white-space:nowrap;">
+                        新安寓情·陈必武咏新安诗书作品展开幕</li></a>
+                    <span style="display: flex;float: right; margin-top: -20px;">2022/10/31</span>
+
+                    <a href="#" ><li style="width: 70%; overflow: hidden;white-space:nowrap;">
+                        秋之美——当代中国油画名家作品展在京开展</li></a>
+                    <span style="display: flex;float: right; margin-top: -20px;">2022/10/31</span>
+
+                    <a href="#" ><li style="width: 70%; overflow: hidden;white-space:nowrap;">
+                        印刻时代——20世纪以来中国版画的实践与流变专题研究展在东莞举行
+                    </li></a>
+                    <span style="display: flex;float: right; margin-top: -20px;">2022/10/31</span>
+
+
+                    <a href="#" ><li style="width: 70%; overflow: hidden;white-space:nowrap;">
+                        离开家每节课合肥市还不够叴咯看更好你会今年还不够叴咯看更好你还不够叴咯看更</li></a>
+                    <span style="display: flex;float: right; margin-top: -20px;">2022/10/31</span>
+                </ul>
+                <ul>
+                    <a href="#" ><li style="width: 70%; overflow: hidden;white-space:nowrap;">
+                        广西书法院院士作品展在南宁举行</li></a>
+                    <span style="display: flex;float: right; margin-top: -20px;">2022/10/30</span>
+
+                    <a href="#" ><li style="width: 70%; overflow: hidden;white-space:nowrap;">
+                        “锦绣中华：传统织染绣艺术与生活展”首展启幕</li></a>
+                    <span style="display: flex;float: right; margin-top: -20px;">2022/10/30</span>
+
+                    <a href="#" ><li style="width: 70%; overflow: hidden;white-space:nowrap;">
+                        最新力作！重庆艺术家王朝刚个展《秘境》杭州开幕</li></a>
+                    <span style="display: flex;float: right; margin-top: -20px;">2022/10/30</span>
+
+
+                    <a href="#" ><li style="width: 70%; overflow: hidden;white-space:nowrap;">
+                        佛山展出百件美术作品庆祝党的二十大胜利召开</li></a>
+                    <span style="display: flex;float: right; margin-top: -20px;">2022/10/30</span>
+                </ul>
+                <!--信息来源-->
+                <div style="display:flex;float:right;margin-top:20px;bottom: 0px;width: 100%;font-size: 10px;">
+                    资料来源：艺术新闻-中国美术家<br>
+                    http://news.meishujia.cn/index.php?act=app&appid=4096&fenlei=227
+                </div>
+            </div>
+        </div><!--右边展讯  结束-->
+
+        <!--视频-->
+        <div class="clip">
+            <div class="case">
+                <h4>视频鉴赏</h4>
+                <div class="mp4" style="margin-top: 30px;">
+                    <div class="doBx">  <!--视频-->
+<!--                        <img src="http://qsg.meishujia.cn/ftpjs/jgall_news/js/themes/light/img-prev.gif" />-->
+                        <img src="http://art.china.cn/tongzhi/images/2022-10/30/f31c35dc-e8a5-4a76-b932-7a34af0311bb.jpg" width="100%" height="500vh" />
+<!--                        controls="controls"  class="video" ></video>-->
+                    </div>
+                </div>
+                <div class="Ptext"><!--文字-->
+                    <div style="margin-top: 10px;text-align: center;">浅空飘浮<br><br>
+                        艺术家：毛焰、于艾君、方凯、葛辉、张瑛、贺勋、于航<br><br>
+                        时间：9:30 - 18:00 周日推迟至13:00开放<br><br>
+                        展厅：金臣亦飞鸣美术馆<br>
+                    </div>
+                </div>
+            </div>
+        </div><!--视频结束-->
+
+
+    </div>
+</div>
+<div class="Below-Box" style="display: flex;float: bottom;margin-top: -2px;background-color: rgba(58,59,60,0.07)"><!--授权说明-->
+    <div class="row">
+        <div class="col-12" style="margin-left: 30%;width: 100%;">
+            <div >
+                作品来源于网络，仅供学习鉴赏使用，
+                图片版权归原作者或原照片所有者或原出版社所有，如有冒犯或侵权,敬请联系删除。 &nbsp;|&nbsp;版权所有:******
+            </div>
+            <div style="margin-left: 30%;">
+                ©Copyright of frame design is reserved in 2022.            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 引入JS -->
+<!--<script type="text/javascript" src='javascripts/News/gallery.js'></script>-->
+</body>
+<script type="text/javascript" src='javascripts/News/gallery.js'></script>
+
+
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="images/图标/LOGO.png" rel="shortcut icon" type="image/x-icon" />
+    <title>艺术新闻 - 新闻咨询</title>
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel='stylesheet' href='https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css'><!--顶部样式调用-->
+
+
+    <link rel="stylesheet" href='stylesheets/News/NewPage.css' />
+<!--    <link rel="stylesheet" href='stylesheets/News/News.css' />-->
+</head>
+<body>
+<div>
+    <nav class="" id="nav">
+        <ul class="nav nav-tabs" >
+            <li class="left">
+                <img class="LOGO" src="images/图标/LOGO2.png" width="60px" class="glyphicon" /><span></span><span class="wenzi ">&nbsp Art Research Institute</span><!--左标签-->
+                <span> &nbsp &nbsp <img class="phone" src="images/图标/电话咨询.png" width="230px" class="glyphicon" /></span>
+            </li>
+
+            <!--首页开始-->
+            <li style="padding-top: 8px;" ><a href="index"><span><img src="images/图标/home.png" width="20px" class="Icon" /></span>&nbsp;&nbsp;首页 </a></li>
+            <li style="padding-top: 8px;" class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#" >作品赏析 <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a  href="Western"><span><img src="images/图标/Western.png" width="20px" class="Icon" /></span>&nbsp;&nbsp;西方名画</a></li>
+                    <li><a  href="Chinese"><span><img src="images/图标/Chinese.png" width="20px" class="Icon" /></span>&nbsp;&nbsp;国内名画</a></li>
+                    <li><a  href="userWorks"><span><img src="images/图标/userworks.png" width="20px" class="Icon" /></span>&nbsp;&nbsp;当代画作</a></li>
+                    <li class="divider"></li>
+                    <li><a href="/works">&nbsp&nbsp全部作品</a></li>
+                </ul>
+            </li>
+
+            <li style="padding-top: 8px;" class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#" >美术史 <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="Whistory"><span><img src="images/图标/Westernwork.png" width="20px" class="Icon" /></span>&nbsp;&nbsp;西方绘画史</a></li>
+                    <li><a href="Chistory"><span><img src="images/图标/Chinesework.png" width="20px" class="Icon" /></span>&nbsp;&nbsp;国内绘画史</a></li>
+                </ul>
+            </li>
+
+            <li style="padding-top: 8px;" ><a href="/News"><span><img src="images/图标/New.png" width="20px" class="Icon" /></span>&nbsp;&nbsp;艺术新闻 </a></li>
+            <li style="padding-top: 8px;" ><a href="/collect"><span ><img src="images/图标/collect.png" width="20px" class="Icon" /></span>&nbsp;&nbsp;电子收藏 </a></li>
+            <li style="padding-top: 8px;" ><a onclick="window.open('/Enter')"><span> <img src="images/图标/user.png" width="20px" class="Icon" /></span>&nbsp;&nbsp;登录/注册 &nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+
+        </ul>
+
+
+        <!--            /*新闻主页导航栏*/-->
+        <ul class="navigation" >
+            <li ><a href="/News">主页</a></li>
+            <li  class="active" ><a href="/NewPage">新闻</a></li>
+            <li><a href="/gallery">展讯</a></li>
+        </ul>
+    </nav>
+</div>
+
+
+<!--新闻资讯   开始-->
+<div class="NewBox">
+        <!--第一则-->
+        <ul  class="NewOne">
+            <% rawData.forEach(function(item){ %>
+            <li class="imageII"> <img src="<%= item.ImgUrl %>"/> </li>
+            <div class="textII">
+                <li class="ShangII"><%= item.NewsName %></li>
+                <li><p class="explain" data-id=`<%= item.id %>`><%= item.Explain %></a> </p></li>
+                <div class="date">
+                    <span><%= item.Author %></span>
+                    &nbsp&nbsp&nbsp&nbsp<span>more:  <%= item.Date %></span></div>
+            </div>
+            <div class="rowLink"></div>
+            <% }) %>
+        </ul>
+</div><!--新闻资讯   结束-->
+<div class="NewTwo">
+    <div class="advertisement" style="width: 100%;margin-bottom: 50px;display: inline-block;">
+        <div class="advertisement" style="width: 100%;height: 400px;margin-bottom: 50px;display: inline-block;">
+            <img src="/images/广告/1.png">
+        </div>
+        <div class="advertisement" style="width: 100%;height: 200px;margin-bottom: 50px;display: inline-block;">
+            <img src="/images/广告/3.png">
+        </div>
+        <div class="advertisement" style=" overflow:hidden;width: 100%;margin-bottom: 50px;display: inline-block;">
+<!--            <h3>广告位3</h3>-->
+            <img src="/images/广告/2.png">
+        </div>
+    </div>
+
+</div>
+<script>
+    $(function (){
+        var id ;
+        $('.explain').click(function (){
+            id = $(this).data('id');
+            id = id.match(id)[0].replace("`","").replace("`","");
+            // window.open('tieNew');
+            window.open(`/tieNew?id=${id}`);/*打开新窗口*/
+        })
+    })
+</script>
+
+</body>
+</html>

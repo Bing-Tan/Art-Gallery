@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link href="images/图标/LOGO.png" rel="shortcut icon" type="image/x-icon" />
+    <title>用户中心 - 退出账号</title>
+    <link rel='stylesheet' href='stylesheets/Enter/outlogin.css' />
+
+</head>
+
+<body>
+<form class="container" action="/outlogin" method="post">
+    <div class="center">
+        <img src="/images/图标/取消.png" width="30px" class="img" />
+        <h3 class="title" >是否确定退出账号？</h3>
+        <div class="button">
+            <span id="cancel" class="cancel" >取消</span>
+            <input  type="submit" class="determine" value=" 确定" />
+        </div>
+    </div>
+</form>
+
+
+
+<script>
+    $(function (){
+        $('.container,.img').click(function(){
+            alert('yidianzhong ')
+            console.log('chenhgg ')
+            self.location = 'main';
+        })
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,245 @@
+.container{
+    width: 100%;
+    position: absolute;
+}
+.table{
+    width: 100%;
+    margin: auto;
+    /*border: 1px solid grey;*/
+    /*background-color: rgba(227, 141, 19, 0.19);*/
+}
+.form{
+    width: 90%;
+    margin: auto;
+    margin-top: 20px;
+    border: 1px solid rgba(128, 128, 128, 0.59);
+    border-radius:20px ;
+    background-color: #FFFFFF;
+    padding-left: 30px;
+    box-shadow: 0px 1px 10px 1px rgba(127, 124, 125, 0.34);
+}
+
+.choose{
+    position: absolute;
+    display: block;
+    margin-top: 85px;
+    /*padding-right: 30px;*/
+}
+
+/*设置图片*/
+.goods{
+    width: 150px;
+    height: 150px;
+    /*border: 3px solid grey;*/
+    overflow: hidden;
+    border-radius: 15px;
+    /*margin-left: 30px;*/
+    margin:15px 15px 15px 50px;
+    /*position: absolute;*/
+}
+.goods img{
+    width: 150px;
+}
+
+/*设置标题*/
+.GoodsName{
+    display: flex;
+    position: absolute;
+    margin-top: 20px;
+    /*float: right;*/
+    margin-left: 250px;
+    font-size: 22px;
+}
+/*设置描述*/
+.explain{
+    display: flex;
+    position: absolute;
+    /*float: right;*/
+    margin-top: -100px;
+    margin-left: 250px;
+    font-size: 15px;
+}
+/*设置数量*/
+.plussub{
+    display: flex;
+    position: absolute;
+    /*float: right;*/
+    margin-top: -60px;
+    margin-bottom: 50px;
+    margin-left: 50%;
+    font-size: 15px;
+}
+/*数字设置*/
+.quantity{
+    /*margin-left:10px;*/
+    /*margin-bottom:50px;*/
+    width:40px;
+    text-align:center;
+    background: rgba(112,112,112,0.5);
+    color: whitesmoke;
+}
+/*设置减号*/
+.sub{
+    /*margin-top: 30px;*/
+    border: 1px solid #ffffff;
+    font-size: 30px;
+    padding: 5px;
+    color:rgb(163, 163, 163);
+}
+#plus{
+    border: 1px solid #ffffff;
+    font-size: 30px;
+    padding: 5px;
+    color:rgb(163, 163, 163);
+}
+#sub:hover{
+    color: rgba(60, 60, 60, 0.84);
+    cursor: pointer;
+}
+#plus:hover{
+    color: rgba(60, 60, 60, 0.84);
+    cursor: pointer;
+}
+
+/*设置价格*/
+/*单价*/
+.univalent{
+    color: #383838;
+    font-size: 15px;
+    display: flex;
+    position: absolute;
+    /*float: right;*/
+    margin-top: -45px;
+    margin-left: 250px;
+}
+.price{
+    color: #d9534f;
+    font-size: 20px;
+    display: flex;
+    position: absolute;
+    /*float: right;*/
+    margin-top: -45px;
+    margin-left: 400px;
+}
+
+/*设置删除*/
+.delete{
+    display: flex;
+    position: absolute;
+    /*float: right;*/
+    margin-top: -80px;
+    margin-left: 65%;
+}
+.delete span{
+    color: #3a7de8;
+    font-size: 15px;
+    margin-right: 30px;
+}
+
+/*删除弹窗*/
+.isDelete{
+    width: 100vw;
+    height: 100vh;
+    /*border: 1px solid slateblue;*/
+    background-color: rgba(183, 124, 105, 0.11);
+    /*display: block;*/
+    position: absolute;
+    /*top:-20%;*/
+    display: none;
+}
+.dialog-wrap{
+    /*margin: auto;*/
+    margin-top: 30vh;
+    margin-left: 30vw;
+    width: 400px;
+    border: 1px solid grey;
+    border-radius: 12px;
+    box-shadow: 0px 0px 10px 2px rgba(128, 128, 128, 0.42);
+    /*height: 50%;*/
+    /*border: 1px solid slateblue;*/
+    background-color: rgb(255, 255, 255);
+}
+.dialog-header{
+    padding-top: 20px;
+    /*margin-top: 50px;*/
+    text-align: center;
+    /*font-size: 25px;*/
+}
+.closer{
+    margin-right: 20px;
+    margin-top: -20px;
+    opacity: 1;
+    background-color: #6d6d6d;
+}
+.closer:hover{
+    opacity: 0.8;
+}
+.dialog-footer{
+    margin: auto;
+}
+/*确定按钮*/
+.dialog-footer button{
+    border: #FFFFFF;
+    border-radius: 5px;
+    padding: 6px 20px;
+    color: #FFFFFF;
+    background: #b77c69;
+    transition: 0.3s;
+    margin: 15px;
+}
+.dialog-footer button:hover{
+    padding: 7px 22px;
+    background-color: rgb(206, 143, 120);
+    cursor:pointer;
+}
+
+/*取消上传按钮*/
+.dialog-footer span {
+    margin-left: 50px;
+    display: inline-block;
+    border-radius: 5px;
+    padding: 6px 20px;
+    color: #FFFFFF;
+    background-color:#b77c69;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.dialog-footer span:hover{
+    padding: 7px 22px;
+    background-color: rgb(206, 143, 120);
+    cursor:pointer;
+}
+
+/*底部声明*/
+.footer{
+    /*display: none;*/
+    /*height: 100px;*/
+    width: 100%;
+    /*text-align: center;*/
+    padding: 10px;
+    background-color: rgba(221, 221, 221, 0.81);
+    position: fixed;
+    bottom: 0;
+}
+.footer span:nth-of-type(1){
+    color: #343434;
+    font-size: 20px;
+    margin-left: 10%;
+}
+.footer span:nth-of-type(2){
+    color: #343434;
+    font-size: 20px;
+    margin-left: 40%;
+}
+.footer span:nth-of-type(3){
+    color: #ffffff;
+    font-size: 20px;
+    margin-left: 40px;
+}
+.footer span:nth-of-type(3) input{
+    padding:10px 25px;
+    color: #ffffff;
+    background-color: #822a27;
+    /*font-size: 20px;*/
+    /*margin-left: 40%;*/
+}

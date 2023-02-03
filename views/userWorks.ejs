@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link href="images/图标/LOGO.png" rel="shortcut icon" type="image/x-icon" />
+    <title>作品欣赏 - 当代画作</title>
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel='stylesheet' href='https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css'><!--顶部样式调用-->
+    <link rel="stylesheet" href='/stylesheets/bootstrap-theme.min.css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/works/userWork.css"/>
+    <link rel="stylesheet" type="text/css" href="stylesheets/works/public.css"/>
+
+
+</head>
+
+
+
+<body>
+<!--文字导航-->
+<div class="header">
+    <div class="headerf">
+        <nav class="nav" id="nav">
+            <ul class="nav nav-tabs" >
+                <li class="col-md-6">
+<!--                    <form class="col" action="/userWorks" method="post">-->
+<!--                        <input type="text" placeholder="请输入搜索内容" name="search"  />-->
+<!--                        <button name="like" >搜索</button>-->
+<!--                    </form>-->
+                </li>
+
+                <li ><a onclick="window.open('/index')"><span><img src="images/图标/home.png" width="20px" class="Icon" /></span>&nbsp;首页 </a></li><!--glyphicon是bootstrap图标的引用-->
+                <li ><a href="works"><span></span>&nbsp;全部作品 </a></li>
+                <li  ><a href="Western"><span><img src="images/图标/Western.png" width="20px" class="Icon" /></span>&nbsp;西方画作</a></li>
+                <li ><a href="Chinese"><span><img src="images/图标/Chinese.png" width="20px" class="Icon" /></span>&nbsp;国内画作 </a></li>
+                <li  class="active"><a href="userWorks"><span><img src="images/图标/userworks.png" width="20px" class="Icon" /></span>&nbsp;用户原创 </a></li>
+
+            </ul>
+        </nav>
+    </div>
+</div>
+
+<div class="search">
+    <% rawData.forEach(function(item,index){ %>
+    <div class="container">
+        <div class="top" >
+            <div class="left">
+                <div class="head">
+                    <img src="<%= userData[index].item.substring (6) %>" width="100px" />
+                </div>
+                <span>未关注</span>
+            </div>
+            <div class="right">
+                <div>
+                    <span><%= item.WorkId %></span>
+                    <span><%= userData[index].itemDesc %></span>
+                </div>
+
+            </div>
+        </div>
+        <div class="middle">
+            <div class="worksImg" data-id=`<%= item.id %>`>
+                <img src="<%= item.ImgUrl.substring (6) %>" >
+            </div>
+            <div class="describe">
+                <p><%= item.Explain %></p>
+            </div>
+        </div>
+        <div class="bottom">
+            <a class="comment" data-id=`<%= item.id %>`>
+                <img src="images\图标\评论.png" width="30px">
+                <span >评论详情</span>
+            </a>
+            <div class="function">
+                <div class="share">
+                    <img src="images\图标\分享.png" width="30px">
+                    <p>分享</p>
+                </div>
+                <div class="share">
+                    <img src="images\图标\收藏.png" width="30px">
+                    <p>收藏</p>
+                </div>
+                <div class="share">
+                    <img src="images\图标\点赞.png" width="30px">
+                    <p>点赞</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <% }) %>
+</div>
+
+<!--返回顶部-->
+<button onclick="topFunction()" id="Totop" title="回顶部">
+    <img src="images/图标/回到顶部.png" width="20px" height="20px" />
+    <p>顶部 </p>
+</button>
+
+<div class="login">
+    <a onclick="window.open('/Enter')">
+        点击进入用户登录
+    </a>
+</div>
+
+<!--授权说明-->
+<div class="footer">
+    <div >
+        作品来源于网络，仅供学习鉴赏使用，
+        图片版权归原作者或原照片所有者或原出版社所有，如有冒犯或侵权,敬请联系删除。 &nbsp;|&nbsp;版权所有:******
+    </div>
+    <div >
+        ©Copyright of frame design is reserved in 2022.    </div>
+</div>
+
+<!-- 引入JS -->
+<script type="text/javascript" src='javascripts/works/alert.js'></script>
+<script type="text/javascript" src='javascripts/index/Totop.js'></script>
+<script>
+    $(function (){
+        var id ;
+        $('.worksImg,.comment').click(function (){
+            id = $(this).data('id');
+            id = id.match(id)[0].replace("`","").replace("`","");
+            window.open(`/comment?id=${id}`);/*打开新窗口*/
+        })
+    })
+
+    var strcookie = document.cookie;//获取cookie字符串
+    console.log('cookies',strcookie.account)
+    console.log('userNum',localStorage.getItem('userNum'));
+</script>
+</body>
+
+</html>

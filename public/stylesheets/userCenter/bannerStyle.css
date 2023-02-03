@@ -1,0 +1,457 @@
+body{
+    background-image:url("image/图标/LOGO2.png") ;
+}
+.container{
+    width: 98vw;
+    height: 100%;
+    background:linear-gradient( #ffffff, rgba(255, 255, 255, 0.4));
+
+}
+
+.main{
+    padding: 20px 30px;
+    overflow: hidden;
+}
+
+.select{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 30px;
+    background: #ffffff;
+    border-radius: 2px;
+}
+
+.select form{
+    display: flex;
+}
+
+.select form > div{
+    margin: 0;
+}
+
+.select select{
+    padding: 0 20px;
+    width: 350px;
+    height: 40px;
+    color: #707070;
+    background-color: rgba(97, 97, 97, 0.09);
+    border: 0;
+    outline: none;
+}
+
+.select .search{
+    display: flex;
+    width: 660px;
+    height: 40px;
+    margin-left: 10px;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.select .search input{
+    padding: 0 15px;
+    flex: 1;
+    overflow: hidden;
+    border: 0;
+    background-color: rgba(97, 97, 97, 0.09);
+}
+
+.select .search .searchBtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    border: none;
+    background-color: rgba(97, 97, 97, 0.27);
+}
+
+.select .search .searchBtn > img{
+    width: 30px;
+    height: 30px;
+    margin-top: 5px;
+}
+
+.select button.addBtn{
+    width: 70px;
+    height: 40px;
+    line-height: 40px;
+    font-family: Arial;
+    border-radius: 12px;
+    text-align: center;
+    color: #ffffff;
+    font-weight: 2;
+    background-color: #8d7777;
+    border: 0;
+    cursor:pointer;
+}
+.select button.addBtn:hover{
+    background-color: rgba(141, 119, 119, 0.75);
+}
+
+.content{
+    margin-top: 30px;
+    background: rgba(56, 213, 227, 0.56);
+    border-radius: 24px;
+}
+
+/*作品列表*/
+.table{
+    /*width: 100%;*/
+    color: #000000;
+    /*position: absolute;*/
+    /*text-align: center;*/
+    border: 1px solid saddlebrown;
+}
+.form{
+    width: 540px;
+    /*display: flex;*/
+    float: left;
+    margin-left: 30px;
+    margin-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: 20px;
+    border-radius:20px ;
+    background-color: #FFFFFF;
+    box-shadow: 0px 1px 10px 1px rgba(127, 124, 125, 0.34);
+}
+/*作品图设置*/
+.works{
+    width: 150px;
+    height: 150px;
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    vertical-align: center;
+    text-align: center;
+    border-radius: 12px;
+    position: absolute;
+    /*border: 1px solid saddlebrown;*/
+}
+.works img{
+    position: relative;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+/*作品名称*/
+.seller{
+    width: 200px;
+    font-family: 黑体;
+    font-size: 20px;
+    /*border: 1px solid crimson;*/
+    position: absolute;
+    margin-left: 200px;
+    margin-top: 20px;
+    /*left:300px;*/
+}
+.seller span{
+    margin-top: 20%;
+}
+/*设置描述*/
+.explain{
+    width: 320px;
+    height: 80px;
+    /*border: 1px solid crimson;*/
+    display: flex;
+    position: absolute;
+    margin-top: 55px;
+    margin-left: 200px;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    /*margin-left: 300px;*/
+    font-family: 华文细黑;
+    /*line-height:20%;*/
+    Text-indent:2em;
+
+    font-size: 15px;
+}
+/*作者字样*/
+.author{
+    width: 80px;
+    text-align: center;
+    padding: 5px;
+    border-radius: 36px;
+    color: grey;
+    font-family: 微软雅黑;
+    border: 2px solid rgba(92, 92, 92, 0.13);
+    position: absolute;
+    margin-top:150px;
+    margin-left: 210px;
+    /*font-size: 20px;*/
+}
+/*设置画种*/
+.kind{
+    width: 100px;
+    text-align: center;
+    padding: 5px;
+    border-radius: 36px;
+    color: grey;
+    font-family: 微软雅黑;
+    border: 2px solid rgba(92, 92, 92, 0.13);
+    position: absolute;
+    margin-top:150px;
+    margin-left: 400px;
+}
+/*时间字样*/
+.dateTime{
+    font-size: 10px;
+    color: grey;
+    width: 100%;
+    border-bottom: 1px solid saddlebrown;
+    position: relative;
+    margin-top: 200px;
+}
+.date{
+    display: block;
+    float: left;
+    margin-left: 8%;
+}
+.time{
+    margin-left: 80%;
+}
+/*删除和修改操作*/
+.operate{
+    width: 100%;
+    /*border-bottom: 1px solid saddlebrown;*/
+    position: relative;
+    margin-top: 20px;
+}
+.delete{
+    display: block;
+    /*position: absolute;*/
+    float: left;
+    margin-left: 78%;
+    /*cursor: pointer;*/
+
+}
+.del{
+    Letter-spacing:2px;
+}
+ .del:hover{
+    cursor: pointer;
+     color: #1296bd;
+}
+.delete img{
+    margin-top: -5px;
+}
+/*.detail img{*/
+/*    margin-top: -100px;*/
+/*}*/
+/*.detail{*/
+/*    cursor: pointer;*/
+/*    margin-left: 80%;*/
+/*}*/
+
+
+/*上传弹窗*/
+.dialog{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top:-0%;
+    background-color: rgba(183, 124, 105, 0.11);
+}
+.dialog-wrap{
+    /*position: absolute;*/
+    margin-left: 50%;
+    margin-top:30%;
+    z-index: 999;
+    padding: 20px;
+    width: 460px;
+    /*margin-left: -130px;*/
+    background-color: #FFFFFF;
+    border-radius: 24px;
+    border: 1px solid grey;
+    /*box-shadow:0px 2px 2px 2px grey;*/
+    transform: translate(-50%,-50%);
+}
+
+.dialog-header{
+    position: relative;
+}
+/*删除标题*/
+.dialog-header .Nam{
+    padding: 10px;
+    letter-spacing: 2px;
+    font-size: 20px;
+    font-weight: 1;
+    text-align: center;
+}
+/*删除作品图片*/
+.dialog-header .img{
+    width:100%;
+    /*border: 1px solid saddlebrown;*/
+    text-align: center;
+    border-radius: 20px;
+    overflow: hidden;
+}
+/*添加标题*/
+.dialog-header h3{
+    padding: 10px;
+    letter-spacing: 2px;
+    font-size: 20px;
+    font-weight: 1;
+    text-align: center;
+}
+/*添加X号图标*/
+.dialog-header .close img{
+    display: block;
+    float: right;
+    margin-top: -35px;
+    opacity: 0.5;
+}
+.dialog-header .close img:hover{
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+/*添加作品名称*/
+.work-name {
+    color: #3c3c3c;
+    font-size: 18px;
+    font-weight: 1;
+    margin: 5px 20px;
+}
+.work-name input{
+    margin: 15px;
+    height: 100%;
+    border-radius: 5px;
+    border: 1px solid rgba(128, 128, 128, 0.38);
+    padding: 10px 15px;
+}
+/*添加作品描述*/
+.work-Explain {
+    color: #3c3c3c;
+    font-size: 18px;
+    font-weight: 1;
+    margin: 5px 20px;
+}
+.work-Explain input{
+    margin: 15px;
+    height: 100%;
+    border-radius: 5px;
+    border: 1px solid rgba(128, 128, 128, 0.38);
+    padding: 10px 15px;
+}
+/*画种select*/
+.work-fashion {
+    color: #3c3c3c;
+    font-size: 18px;
+    font-weight: 1;
+    margin: 5px 20px;
+}
+.work-fashion select{
+    padding: 0 20px;
+    width: 200px;
+    height: 30px;
+    color: #707070;
+    border-radius: 5px;
+    background-color: rgba(97, 97, 97, 0.09);
+    border: 1px solid rgba(128, 128, 128, 0.38);
+    outline: none;
+}
+/*选择作品文件*/
+.work-file {
+    color: #3c3c3c;
+    font-size: 18px;
+    font-weight: 1;
+    margin: 5px 20px;
+}
+.work-file input{
+    margin-left:12px;
+    /*padding: 0 20px;*/
+    width: 200px;
+    height: 30px;
+    color: #707070;
+    border-radius: 5px;
+    background-color: rgba(97, 97, 97, 0.09);
+    border: 1px solid rgba(128, 128, 128, 0.38);
+    outline: none;
+    /*opacity: 0;*/
+}
+
+form > div{
+    margin:20px 0;
+}
+.dialog-footer{
+    text-align: right;
+    /*margin-top: 50px;*/
+}
+/*确定上传按钮*/
+.dialog-footer input{
+    /*margin-left:15px;*/
+    border: #FFFFFF;
+    border-radius: 5px;
+    padding: 6px 20px;
+    color: #FFFFFF;
+    background: #b77c69;
+    transition: 0.3s;
+    margin: 15px;
+}
+.dialog-footer input:hover{
+    background-color: rgb(206, 143, 120);
+    cursor:pointer;
+}
+/*删除确定按钮*/
+.dialog-footer button{
+    /*margin-left:15px;*/
+    border: #FFFFFF;
+    border-radius: 5px;
+    padding: 6px 20px;
+    color: #FFFFFF;
+    background: #b77c69;
+    transition: 0.3s;
+    margin: 15px;
+}
+.dialog-footer button:hover{
+    background-color: rgb(206, 143, 120);
+    cursor:pointer;
+}
+/*取消按钮*/
+.dialog-footer span {
+    display: inline-block;
+    margin-left: 50px;
+    /*display: inline-block;*/
+    border-radius: 5px;
+    padding: 6px 20px;
+    color: #FFFFFF;
+    background-color:#b77c69;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.dialog-footer span:hover{
+    /*padding: 7px 22px;*/
+    background-color: rgb(206, 143, 120);
+    cursor:pointer;
+}
+
+.upload-input:hover{
+    cursor:pointer;/*鼠标悬停变手*/
+}
+/*上传添加弹窗隐藏*/
+.isDialog{
+    display: none;
+}
+
+.page{
+    width: 100%;
+    padding: 20px;
+    color: #fff;
+    border-top: 1px solid #ccc;
+}
+
+.page ul li{
+    margin-right:6px ;
+}
+
+/*删除添加弹窗隐藏*/
+
+#isDelete{
+    display: none;
+}
+
+
+
+

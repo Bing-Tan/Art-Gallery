@@ -1,0 +1,219 @@
+
+body{
+    min-height: 100%;
+    background:linear-gradient( #ffffff, rgba(243, 239, 232, 1));
+}
+.container{
+    width: 90%;
+    height: 100vh;
+    position: absolute;
+    overflow: hidden;
+    background-color: white;
+}
+/*本周展览*/
+.capacity{
+    width: 58%;
+    height: 50vh;
+    margin-top: 25px;
+    position: absolute;
+}
+.capacity h3{
+    position: relative;
+    width: 70%;
+    margin-bottom: 20px;
+    color: rgba(27, 28, 33, 0.7);
+    text-align: center;
+    padding: 5px;
+    border-radius: 12px;
+    margin-left: 15%;
+    border-bottom:1px dashed rgb(136,98,112);
+}
+.containerLeft{
+    width: 80%;
+    height: 40vh;
+    display: flex;
+    position: relative;
+    left: 50%;
+    top: 180px;
+    transform: translate(-45%,-50%);
+    color: #5e5e5e;
+    font-weight: 300;
+    text-transform: uppercase;    /* 大写 */
+    perspective: 1300px;    /* 设置视距 */
+}
+input{
+    display: none;
+}
+
+.labels{
+    height: 250px;
+    display: flex;
+    margin-top: 25px;
+    margin-left: 10px;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.tab{
+    height: 80px;
+    line-height: 60px;/*设置行高*/
+    cursor: pointer;
+    text-align: center;
+    padding: 10px;
+    color: #FFFFFF;
+}
+.tab:nth-child(1){
+    border-radius: 5%;
+    background-color: rgb(136,98,112);
+}
+.tab:nth-child(2){
+    border-radius: 5%;
+    background-color: rgb(136,98,112);
+}
+.tab:nth-child(3){
+    border-radius: 5%;
+    background-color: rgb(136,98,112);
+}
+.cube{
+    position: relative;
+    flex: 1;
+    transform-style: preserve-3d;    /* 开启3D */
+    transition: transform 0.5s ease-in;    /* 设置过渡效果 */
+}
+.cube a{
+    width: 100%;
+    padding-left:0;
+    overflow: hidden;
+}
+cube p{
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+}
+.tab-content{
+    width: 95%;
+    height: 230px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: red;
+}
+.tab-content h1{
+    font-size: 28px;
+    font-weight: 300;
+}
+.tab-content p{
+    color:#3c3c3c;
+    font-size: 14px;
+    font-weight: 100;
+}
+.tab-content:nth-child(1){
+    background-color: rgb(229,223,219);
+    transform: rotateX(-270deg) translateY(-115px);
+    transform-origin: top center;
+}
+.tab-content:nth-child(2){
+    background-color:  rgb(229,223,219);
+    transform: translateZ(115px);
+}
+.tab-content:nth-child(3){
+    background-color:  rgb(229,223,219);
+    transform: rotateX(270deg) translateY(115px);
+    transform-origin: bottom center;
+}
+#tab_top:checked ~ .cube{
+    transform: rotateX(-90deg);
+}
+#tab_middle:checked ~ .cube{
+    transform: rotateX(0deg) translateY(35px);
+}
+#tab_bottom:checked ~ .cube{
+    transform: rotateX(90deg);
+}
+
+/*右边展讯*/
+.containerRight {
+    width: 40%;
+    height: 90vh;
+    display: flex;
+    float: right;
+    margin-top: 20px;
+    position: relative;
+    border-left: 1px solid rgba(139, 139, 139, 0.47);
+}
+.containerRight .table h4{
+    margin-bottom: 20px;
+}
+.containerRight .table{
+    width: 90%;
+    height: 50vh;
+    left:5%;
+    top: 15px;
+    position: absolute;
+}
+.containerRight .table ul{
+    border-bottom: 1px dashed #808080;
+    margin-top: 30px;
+    list-style:square inside;
+}
+.table ul li{
+    color: #6f6d6d;
+    margin-top: 10px;
+}
+
+/*视频盒子*/
+.clip{
+    width: 60%;
+    height: 60vh;
+    top: 60vh;
+    position: absolute;
+}
+.clip .case{
+    width: 90%;
+    height: 35vh;
+    top: -1vh;
+    position: absolute;
+}
+clip .case .mp4{
+    display: flex;
+    float: left;
+    width: 100%;
+    height: 30vh;
+    left: 10px;
+    position: relative;
+    overflow: hidden;
+}
+.case .Box-1{
+    display:inline-block;
+    position: relative; /*相对位置*/
+    width:100%; /*宽度*/
+    height: 200px;
+    background-color: rgba(243, 239, 232,0.5);
+    margin-right: 20px;
+    justify-content: space-around; /*周围允许有空间*/
+    overflow: hidden;
+}
+.Ptext{
+    position: relative;
+    display: flex;
+    float: right;
+    text-indent: 2em;
+    width:30%; /*宽度*/
+    height: 222px;
+    font-family: "等线 Light";
+}
+/*展览设置*/
+.doBx{
+    /*left:2%;*/
+    width: 480px;
+    height: 200px;
+    margin-bottom:30px;
+    position: absolute;
+    display: flex;
+    float: left;
+    /*border: 1px solid #3c3c3c;*/
+    overflow: hidden;
+}
+

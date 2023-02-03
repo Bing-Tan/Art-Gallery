@@ -1,0 +1,485 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns="http://www.w3.org/1999/html">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link href="images/图标/LOGO.png" rel="shortcut icon" type="image/x-icon" />
+  <title>Art Research Institute - 首页</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/> <!-- 引用animate.css-->
+  <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+  <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel='stylesheet' href='https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css'><!--顶部样式调用-->
+  <link rel="stylesheet" href='/stylesheets/bootstrap-theme.min.css'>
+  <link rel='stylesheet' href='stylesheets/index/first.1.css' /><!--全局css文件-->
+  <link rel='stylesheet' href='stylesheets/index/fanye.css' /><!--图片翻页调用css文件-->
+  <link rel='stylesheet' href='stylesheets/index/focus.css' /><!--图片聚焦css文件-->
+
+</head>
+
+
+<body>
+<!--导航栏-->
+<div class="container" id="container">
+  <!--文字导航-->
+  <div class="navigation">
+    <nav class="nav" id="nav">
+      <ul class="nav nav-tabs" >
+        <li class="col-md-6">
+          <img src="images/图标/LOGO2.png" width="60px" class="glyphicon" /><span></span><span style="font-size: 20px;font-family:Blackadder ITC;">&nbsp Art Research Institute</span><!--左标签-->
+          <span> &nbsp &nbsp <img src="images/图标/电话咨询.png" width="230px" class="glyphicon" /></span>
+        </li>
+
+        <!--首页开始-->
+        <li style="padding-top: 8px;" ><a href="index"><span><img src="images/图标/home.png" width="20px" class="Icon" /></span>&nbsp;&nbsp;首页 </a></li>
+        <li style="padding-top: 8px;" class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#" >作品赏析 <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a  onclick="window.open('/Western')"><span><img src="images/图标/Western.png" width="20px" class="Icon" /></span>&nbsp;&nbsp;西方名画</a></li>
+            <li><a  onclick="window.open('/Chinese')"><span><img src="images/图标/Chinese.png" width="20px" class="Icon" /></span>&nbsp;&nbsp;国内名画</a></li>
+            <li><a  onclick="window.open('/userWorks')"><span><img src="images/图标/userworks.png" width="20px" class="Icon" /></span>&nbsp;&nbsp;当代画作</a></li>
+            <li class="divider"></li>
+            <li><a onclick="window.open('/works')">&nbsp&nbsp全部作品</a></li>
+          </ul>
+        </li>
+
+        <li style="padding-top: 8px;" class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#" >美术史 <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a onclick="window.open('/Whistory')"><span><img src="images/图标/Westernwork.png" width="20px" class="Icon" /></span>&nbsp;&nbsp;西方绘画史</a></li>
+            <li><a onclick="window.open('/Chistory')"><span><img src="images/图标/Chinesework.png" width="20px" class="Icon" /></span>&nbsp;&nbsp;中国绘画史</a></li>
+          </ul>
+        </li>
+
+        <li style="padding-top: 8px;" ><a onclick="window.open('/News')"><span><img src="images/图标/New.png" width="20px" class="Icon" /></span>&nbsp;&nbsp;艺术新闻 </a></li>
+        <li style="padding-top: 8px;" ><a onclick="window.open('/collect')"><span ><img src="images/图标/collect.png" width="20px" class="Icon" /></span>&nbsp;&nbsp;电子收藏 </a></li>
+        <li style="padding-top: 8px;" ><a onclick="window.open('/Enter')"><span> <img src="images/图标/user.png" width="20px" class="Icon" /></span>&nbsp;&nbsp;登录/注册 &nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+
+      </ul>
+    </nav>
+
+    <!--图片-->
+    <div class="case">
+      <div class="focus">
+        <div class="photoes">
+          <div class="box1"><img src="images/首页/focus/front.png" width="1300px" height="500px" /></div>
+          <div class="box2"><img src="images/首页/focus/left-tree.png" width="1300px" height="500px" /></div>
+          <div class="box3"><img src="images/首页/focus/wall.png" width="1300px" height="500px" /></div>
+          <div class="box4"><img src="images/首页/focus/house.png" width="1300px" height="500px" /></div>
+          <div class="box5"><img src="images/首页/focus/behide.png" width="1300px" height="500px" /></div>
+          <div class="box6"><img src="images/首页/focus/complete.jpg" width="1300px" height="500px" /></div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!--返回顶部-->
+  <button onclick="topFunction()" id="Totop" title="回顶部">
+    <img src="images/图标/回到顶部.png" width="20px" height="20px" />
+    <p>顶部 </p>
+  </button>
+
+
+  <!--首页内容-->
+  <div class="content">
+
+    <!--西方作品-->
+    <center  class="BigBox">
+      <h1 class="title" >作品推荐</h1>
+      <div class="link-top"></div>
+      <p class="works" ><--<span> &nbsp &nbsp</span>  Western works <span> &nbsp &nbsp</span> --></p>
+      <div class="Box-1">
+        <div class="pag-box">
+          <div class="imgBx"> <!--图片-->
+            <img src="/images/首页/西方作品/拾穗者.webp" alt="Error!">
+          </div>
+          <div class="Box-content"> <!--翻页之后的文本-->
+            <div>
+              <h2>拾穗者</h2>
+              <p>19世纪40年代，有一群青年画家逃离城市喧嚣，回归自然，聚居在巴黎郊外枫丹白露森林边上的巴比松地区，
+                他们用现实主义的方法创作风景画，被称为“巴比松画派”。米勒就是其中一员，他出身农民家庭，
+                对农村劳苦大众的疾苦有着深深的体会，他也将这种情感倾注在自己的画面当中。
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="explain">
+          <p class="text">名称：&nbsp;拾穗者&nbsp;&nbsp;&nbsp;作者：&nbsp;米勒</p>
+          <input type="submit" value="查看详情" class="detail">
+        </div>
+      </div>
+
+      <div class="Box-1">
+        <div class="pag-box">
+          <div class="imgBx"> <!--图片 -->
+            <img src="images/首页/西方作品/睡莲.jpg" alt="Error!">
+          </div>
+          <div class="Box-content"><!-- 翻页之后的文本-->
+            <div>
+              <h2>睡莲</h2>
+              <p>
+                《睡莲》系列作品，从1897到1926年，莫奈总共画过181幅。
+                莫奈花园位于法国巴黎以西70公里的吉维尼小镇上。
+                1883年4月底莫奈乘火车经过小镇的时候，被那里的宁静氛围所深深吸引，于是决定在此定居，
+                并在此买下一块土地建造属于自己的花园。他在自己的花园里新建了一个池塘并种上了喜爱的睡莲和柳树等植物。
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="explain">
+          <p class="text">名称：&nbsp;睡莲（其一）&nbsp;&nbsp;&nbsp;作者：&nbsp;莫奈</p>
+          <input type="submit" value="查看详情" class="detail">
+        </div>
+      </div>
+
+      <div class="Box-1">
+        <div class="pag-box">
+          <div class="imgBx">  <!--图片-->
+            <img src="images/首页/西方作品/马拉之死.jpg" alt="Error!">
+          </div>
+          <div class="Box-content"> <!--翻页之后的文本-->
+            <div>
+              <h2>马拉之死</h2>
+              <p>
+                在封闭狭小的陋室里，马拉倒在浴缸中，一手握着笔，
+                一手握着染了鲜血的信，油画的上半部笔触松散凌乱，可能是一面墙，
+                也可能只是含糊不明的空间，代表着永恒的虚无，但那个充当书桌、
+                粗糙平实的木箱，仿佛在诉说着马拉的美德。
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="explain">
+          <p class="text">名称:马拉之死&nbsp;&nbsp;&nbsp;作者:雅克路易斯达维特</p>
+          <input type="submit" value="查看详情" class="detail">
+        </div>
+      </div>
+
+      <div class="Box-1">
+        <div class="pag-box">
+          <div class="imgBx">  <!--图片-->
+            <img src="images/首页/西方作品/桌球.jpg" alt="Error!">
+          </div>
+          <div class="Box-content"> <!--翻页之后的文本-->
+            <div>
+              <h2>桌球</h2>
+              <p>
+                作者1807年画成，两百年前欧洲人的生活。
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="explain">
+          <p class="text">名称:桌球&nbsp;&nbsp;&nbsp;作者:路易斯.利奥波德.布瓦伊</p>
+          <input type="submit" value="查看详情" class="detail">
+        </div>
+      </div>
+      <center><a href="Western"><button class="more" >了解更多 ..</button></a></center>
+    </center>
+
+    <!--国内作品-->
+    <center class="BigBox">
+      <h1 class="title" >作品推荐</h1>
+      <div class="link-top"></div>
+      <p class="works" ><--<span> &nbsp &nbsp</span>  Domestic works <span> &nbsp &nbsp</span> --></p>
+      <div class="Box-1">
+        <div class="pag-box">
+          <div class="imgBx"> <!--图片-->
+            <img src="images/首页/国内作品/群仙祝寿图.jpg" alt="Error!">
+          </div>
+          <div class="Box-content"> <!--翻页之后的文本-->
+            <div>
+              <h2>群仙祝寿图</h2>
+              <p>《群仙祝寿图》是任伯年人物画中的杰作，十二幅通景屏，共描绘了46个人物。他们分布在每一幅画上，少则一人，多则六人。每幅人物按景色的不同配置也有不同，但都可以独立成画，并无支离破碎的感觉，合拢起来又浑然一体，天衣无缝。
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="explain">
+          <p class="text">名称：&nbsp;群仙祝寿图&nbsp;&nbsp;&nbsp;作者：&nbsp;任熊</p>
+          <input type="submit" value="查看详情" class="detail">
+        </div>
+      </div>
+
+      <div class="Box-1">
+        <div class="pag-box">
+          <div class="imgBx"> <!--图片 -->
+            <img src="images/首页/国内作品/南山积翠图.jpg" alt="Error!">
+          </div>
+          <div class="Box-content"><!-- 翻页之后的文本-->
+            <div>
+              <h2>南山积翠图</h2>
+              <p>《南山积翠图》是清代画家王时敏晚年创作的一副绢本设色画，现收藏于辽宁省博物馆。 [1]
+                画面布置有序，层次井然，笔墨清隽秀润，沉静淡雅，毫无躁气，具有温厚而博大之美。
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="explain">
+          <p class="text">名称：&nbsp;南山积翠图&nbsp;&nbsp;&nbsp;作者：&nbsp;王时敏</p>
+          <input type="submit" value="查看详情" class="detail">
+        </div>
+      </div>
+
+      <div class="Box-1">
+        <div class="pag-box">
+          <div class="imgBx">  <!--图片-->
+            <img src="images/首页/国内作品/雪竹图.jpg" alt="Error!">
+          </div>
+          <div class="Box-content"> <!--翻页之后的文本-->
+            <div>
+              <h2>雪竹图</h2>
+              <p>《雪竹图》描绘的是江南雪后严冬中的枯木竹石。画中三竿大竹挺拔参天，苍劲有力。在石旁的竹竿上，有倒书篆体“此竹可值黄金百两”8字、旁置弯曲和折断了的残竹，还有一些细嫩的幼竹参差其间。
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="explain">
+          <p class="text">名称：&nbsp;雪竹图&nbsp;&nbsp;&nbsp;作者：&nbsp;徐熙</p>
+          <input type="submit" value="查看详情" class="detail">
+        </div>
+      </div>
+
+      <div class="Box-1">
+        <div class="pag-box">
+          <div class="imgBx">  <!--图片-->
+            <img src="images/首页/国内作品/老子道德经.png" alt="Error!">
+          </div>
+          <div class="Box-content"> <!--翻页之后的文本-->
+            <div>
+              <h2>道德经</h2>
+              <p>
+                《道德经》是赵孟頫的小楷代表作之一，书于延祐三年（公元1316年），至今700多年。他时年六十三岁，字体工整秀丽，笔法稳健，独具风格。卷首有明姚绶行书“松雪书道德经”六字，前隔水绫上有近人张爰二题。曾经为明项元汴、项笃寿收藏。                </p>
+            </div>
+          </div>
+        </div>
+        <div class="explain">
+          <p class="text">名称：&nbsp;老子道德经（局部）&nbsp;&nbsp;&nbsp;作者：&nbsp;赵孟頫</p>
+          <input type="submit" value="查看详情" class="detail">
+        </div>
+      </div>
+      <center><a href="Chinese"><button class="more" >了解更多 ..</button></a></center>
+    </center>
+
+    <!--用户作品-->
+    <center class="BigBox">
+      <h1 class="title" >作品推荐</h1>
+      <div class="link-top"></div>
+      <p class="works" ><--<span> &nbsp &nbsp</span>  Users works <span> &nbsp &nbsp</span> --></p>
+      <div class="Box-1">
+        <div class="pag-box">
+          <div class="imgBx"> <!--图片-->
+            <img src="images/首页/用户作品/黄文秀.jpg" alt="Error!">
+          </div>
+          <div class="Box-content"> <!--翻页之后的文本-->
+            <div>
+              <h2>黄文秀</h2>
+              <p>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="explain">
+          <p class="text">名称：&nbsp;黄文秀&nbsp;&nbsp;&nbsp;作者：&nbsp;海成龙</p>
+          <input type="submit" value="查看详情" class="detail">
+        </div>
+      </div>
+
+      <div class="Box-1">
+        <div class="pag-box">
+          <div class="imgBx"> <!--图片 -->
+            <img src="images/首页/用户作品/雅风之三.jpg" alt="Error!">
+          </div>
+          <div class="Box-content"><!-- 翻页之后的文本-->
+            <div>
+              <h2>雅风之三</h2>
+              <p>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="explain">
+          <p class="text">名称：&nbsp;雅风之三&nbsp;&nbsp;&nbsp;作者：&nbsp;陆建国</p>
+          <input type="submit" value="查看详情" class="detail">
+        </div>
+      </div>
+
+      <div class="Box-1">
+        <div class="pag-box">
+          <div class="imgBx">  <!--图片-->
+            <img src="images/首页/用户作品/不知.jpg" alt="Error!">
+          </div>
+          <div class="Box-content"> <!--翻页之后的文本-->
+            <div>
+              <h2>不明</h2>
+              <p>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="explain">
+          <p class="text">名称：&nbsp;不明&nbsp;&nbsp;&nbsp;作者：&nbsp;不明</p>
+          <input type="submit" value="查看详情" class="detail">
+        </div>
+      </div>
+
+      <div class="Box-1">
+        <div class="pag-box">
+          <div class="imgBx">  <!--图片-->
+            <img src="images/首页/用户作品/无.jpg" alt="Error!">
+          </div>
+          <div class="Box-content"> <!--翻页之后的文本-->
+            <div>
+              <h2>不明</h2>
+              <p>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="explain">
+          <p class="text">名称：&nbsp;不明&nbsp;&nbsp;&nbsp;作者：&nbsp;不明</p>
+          <input type="submit" value="查看详情" class="detail">
+        </div>
+      </div>
+      <center><a href="userWorks"><button class="more" >了解更多 ..</button></a></center>
+    </center>
+
+    <!--绘画基础知识-->
+    <center class="BigBox-two">
+      <h1 class="title" >绘画基础知识</h1>
+      <div class="link-top"></div>
+      <p class="works" ><--<span> &nbsp &nbsp</span>  Basic Knowledge Of Painting <span> &nbsp &nbsp</span> --></p>
+      <div class="two-1">
+        <div class="images"><img src="images/首页/毕加索.格尔尼卡.jpg" width="1000px" /></div>
+        <div class="link-western"></div>
+        <div class="text-box">
+          <h3>理论基础</h3>
+          <p class="input-text" style="line-height:200%;text-indent: 2em;">
+            绘画理论基础知识形体的点、线、面我们所描绘的物体都是立体的，而最基本的形体是立方体、球形、柱体与椎体。素描写生可从这四类形体出发，去研究主体构成的基本因素与形体塑造的关系。点表示位置，是形体塑造的标记，对于造型有着特定的数量意义。
+            先看位置点，找出它的基点与顶点、右点、左点、近点和远点，这些点规定着物体的整体范围和个面之间的大小比例关系。再看转折点，这些点如同交通枢纽，联系着形体中的线与面。
+            核心要素
+            一幅画作，最重要的是思想的呈现，评论家王进玉认为，作者的主张、观点、认识、情感等，才是最核心要素。脱离画家思想的表达、画面实际需要和具体表现对象，纯粹为了笔墨而笔墨，为了技巧而技巧，这样的作品无太多价值可言。
+          </p>
+        </div>
+
+      </div>
+    </center>
+
+    <!--国内美术史-->
+    <center class="BigBox-thr">
+      <h1 class="title" >绘画体系</h1>
+      <div class="link-top"></div>
+      <p class="works" ><--<span> &nbsp &nbsp</span>  Chinese Art History <span> &nbsp &nbsp</span> --></p>
+      <div class="thr-1">
+        <div class="containI" style="display: flex;" >
+          <div class="imageI"> <img src="images/首页/展子虔游春图.jpg" width="800px" /> </div>
+          <div class="textI">
+<!--            <div class="card active" style="background-image:url('images/首页/上.png');">-->
+              <h3 class="ShangII">中国绘画体系</h3>
+<!--            </div>-->
+            <p>
+              中国绘画又名国画，是现代人为区别于西洋画而对中国传统绘画的泛称。
+              它包括卷轴画、壁画、年画、版画等各种各样的门类。有时特指以中国
+              独有的笔墨等工具材料按照长期形成的传统而创作的绘画。中国画现分为三大
+              画科：人物画、山水画、花鸟画；有工笔与写意两大种画法；有卷、轴、册、屏等多种装裱形制。
+            </p>
+          </div>
+        </div>
+        <div class="containIII">
+          <div class="textIII">
+            <h3 class="ShangIII">印度绘画体系</h3>
+            <p > 印度绘画，印度艺术是印度次大陆中不同艺术学派的一个总称。
+              印度绘画的种类十分广泛，例如有埃洛拉石窟的大型湿壁画、错综复
+              杂的莫卧儿微型画、坦贾武尔学派的金属装饰画。腱陀罗（Gandhar）
+              至塔克西拉（Taxila）的绘画受到西方伊朗艺术的影响。而有东方特色的
+              绘画则在那烂陀艺术学派附近发展。那些作品大部分都受到印度神话的不同场景所启发。</p>
+          </div>
+          <div class="imageIII"> <img src="images/首页/3.png"  width="700px" /> </div>
+        </div>
+
+      </div>
+    </center>
+
+
+    <!--新闻-->
+    <center class="BigBox-News">
+      <h1 class="title" >艺术新闻</h1>
+      <div class="link-top"></div>
+      <p class="works" ><--<span> &nbsp &nbsp</span>  Art News In World <span> &nbsp &nbsp</span> --></p>
+      <div class="thr-1">
+
+        <div class="NewBox" >
+          <h3 class="" >陆永安--<br/>“云梦之境”</h3>
+          <div class="PBox">
+          <img src="http://art.china.cn/images/2022-11/01/a3b2e20e-2e8e-4f6d-92d8-7c84aafad200.jpg" width="300px" />
+           <div><a href="#">
+             2022年10月30日，由中国美术馆、中国国际文化交流中心、中央广播电视总台“央博”数字文化艺术博物馆共同主办的“云梦之境——陆永安艺术展”在中国美术馆展出。
+              <br/>
+            <p>
+            陆永安是当代用油画技法重塑中国画传统的作品并联结中西方文化传承交流桥梁的代表人物之一。
+            本次展览共展出陆永安自2014年以来创作的油画作品32幅，选取的都是代表其艺术语言日臻成熟完善的代表性作品，
+            画展现场采用了数字沉浸式交互场景与传统油画作品的展示相结合的方式，让线下观众首次沉浸式体验绘画艺术的魅力
+            ，“央博”数字文化艺术博物馆还将为线上观众提供“元宇宙观展体验”。
+          </P>
+           </a></div>
+          </div>
+        </div>
+
+        <div class="NewBox2" >
+          <h3 class="" >百年美育与中国现代审美理想</h3>
+          <div class="PBox2">
+            <img src="http://art.china.cn/images/2022-11/02/e415e9a3-2323-40a1-9c2b-76c1c5ff7a5c.jpg" width="300px" />
+            <div><a href="#">白驹过隙，真正属于自己的只有心中的记忆。<br/>
+              最美的画，应该是画在时间之上的，<br/>
+              时间会给出一切作品答案。<br/>
+              ——戴泽<br/><br/>
+              <p>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在20世纪中国美术史上，戴泽是最为人熟知的名字之一。
+                他师从徐悲鸿先生，作为中央美术学院的奠基人之一、20世纪中国第二代油画家代表人物，
+                为新中国美术事业与文化传承做出了重要贡献。<br/>
+
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;戴泽也是目前唯一一位和齐白石、徐悲鸿、陈之佛、傅抱石
+                、谢稚柳等众多艺术大师有过多年亲密交往的人。
+              </p>
+             <br/></a></div>
+          </div>
+        </div>
+
+      </div>
+    </center>
+
+  </div>
+</div>
+
+<!--底部-->
+<div class="divCopyright">
+  <div class="Above-Box">
+    <h3 class="title" id="works-recommend">了解我们</h3>
+    <img src="images/图标/LOGO2.png" width="30%" style="display: flex;float:left;" />
+    <ul style="list-style:none;margin-right:20%;padding-top:30px;width:20%;float:right;">
+      <li class="writing" style="font-size:24px;font-family:' Yu Gothic UI Semibold';">Art Research</li>
+      <li class="writing" style="margin-top:20px; font-size:18px;font-family:'庞门正道细线体';"><a>平台内容分布</a></li>
+      <li class="writing"  style="margin-top:10px; font-size:18px;font-family:'庞门正道细线体';"><a>设计意义</a></li>
+    </ul>
+  </div>
+  <div class="Below-Box">
+    <div class="row">
+      <div class="col-12">
+        <center>
+          这些作品来源于网络，仅供学习鉴赏使用，
+          图片版权归原作者或原照片所有者或原出版社所有，如有冒犯或侵权,敬请联系删除。 &nbsp;|&nbsp;版权所有:******
+        </center>
+        <center>
+          ©Copyright of frame design is reserved in 2022.        </center>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+</body>
+
+<script type="text/javascript" src='javascripts/index/Totop.js'></script>
+<script type="text/javascript" src='javascripts/index/Navigation.js'></script>
+<script type="text/javascript" src='javascripts/index/focus.js'></script>
+
+
+</html>

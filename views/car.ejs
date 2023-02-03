@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+		  content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link href="images/图标/LOGO.png" rel="shortcut icon" type="image/x-icon" />
+	<title>用户中心 - 我的收藏 - 我收藏的</title>
+
+	<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href='/stylesheets/bootstrap-theme.min.css'>
+	<link rel="stylesheet" href='/stylesheets/userCenter/public.css'>
+	<link rel="stylesheet" href='/stylesheets/userCenter/collect/car.css'>
+
+	<style>
+
+	</style>
+</head>
+
+<body>
+<div class="container">
+	<div class="main">
+		<div class="content">
+			<div class="table" >
+				<form action="/car" method="post">
+<!--					<div class="all" onclick="allChoose()">全选</div>-->
+<!--					<div class="cancelAll" onclick="cancelChoose()" style="display: none;">取消全选</div>-->
+					<% rawData.forEach(function(item){ %>
+					<div class="form">
+						<div class="choose"  >
+<!--							<span style="width: 10px;height: 10px;">s</span>-->
+						<input id="IsAdmin" class="IsAdmin" type="checkbox" name="hobby" disabled="disabled" data-id=`<%= item.id %>` >
+						</div>
+						<div class="GoodsName"><%= item.goodsName %></div>
+						<div class="goods"><img src=  '<%= item.goods.substring (6) %>'  alt="图片" class="" /></div>
+						<div class="explain"><%= item.explain %></div>
+						<div name="quantity">
+							<div class="plussub" id="plussub" >
+								<button id="sub" class="sub"  >&ndash;</button>
+								<input name="quantity" class="quantity" id="quantity" type="text" value="<%= item.quantity %>">
+								<button id="plus" class="plus" >&#43;</button>
+							</div>
+						</div>
+						<div class="univalent">单价： <%= item.price %></div>
+						<div class="price">总价： <%= item.quantity * item.price %>  </div>
+						<div class="delete">
+							<span>查看详情</span>
+							<img src="images/图标/删除.png" width="30px" alt="del" class="delete-item" data-id=`<%= item.id %>` />
+						</div>
+					</div>
+				<% }) %>
+				</form>
+			</div>
+			<div style="text-align: center;margin-top: 20px;font-size: 20px;color: grey;font-weight: 2;">
+				没有更多了...
+			</div>
+		</div>
+	</div>
+</div>
+<!--授权说明-->
+<form class="footer" action="/CarBuy" method="post">
+	<span >共添加XXX件商品</span>
+	<span>总价：1100</span>
+	<span>
+		<input type="submit" value="去结算">
+	</span>
+</form>
+<!--删除弹窗-->
+<form action="/del" method="get" class="isDelete">
+	<div class="dialog "></div>
+	<div class="dialog-wrap ">
+		<div class="dialog-header">
+			<h4>是否确定删除？ </h4>
+			<input type="text" id="id" name="id" style="visibility:hidden;" />
+			<div class="closer" >
+				<img src="/images/图标/关闭26.png" class="close" width="30px"  alt="">
+			</div>
+			<div class="dialog-footer">
+				<span class="cancel">取消</span>
+				<button class="determine determineDel">确定</button>
+			</div>
+		</div>
+	</div>
+</form>
+
+
+<script src="/javascripts/jquery.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.1/jquery.js"></script>
+<script type="text/javascript" src='javascripts/userCenter/car.js'></script>
+
+
+<script>
+	$(function (){
+		var id ;
+		//打开删除弹窗
+		$('.delete-item').click(function (){
+			id = $(this).data('id');
+			id = id.match(id)[0].replace("`","").replace("`","");
+			console.log('id',id);
+			$('.isDelete').show();
+		})
+		//关闭删除窗口
+		$('.closer,.cancel').click(function (){
+			$('.isDelete').hide();
+		})
+		$('.determineDel').click(function (){
+			window.location.href= `/del?id=${id}`;
+
+			// let strippedTitle = num.substring(0, num.indexOf(" s:"));
+		})
+
+	})
+	$('.IsAdmin').click(function () {
+		// $('.all').click(function allChoose() {
+		// 	var id;
+		// 	$("[name='hobby']").attr("checked",'true')     //全选
+		// 	id = $(attr).data('id');
+		// 	id = id.match(id)[0].replace("`","").replace("`","");
+		// 	console.log('id',id);
+		// 	window.location.href= `/CarBuy?id=${id}`;
+		// 	$('.cancelAll').show();
+		// 	$('.cancelAll').click(function cancelChoose(){
+		// 		$("[name='hobby']").removeAttr("checked");   //取消全选
+		// 		window.location.href= `/CarBuy?id=${id}`;
+		// 	})
+		// })
+		// var buy ;
+		var id;
+		var obj = document.getElementsByName("hobby");
+		var check_arr = [];
+		for (var i = 0; i < obj.length; i++) {
+			if (obj[i].checked){
+				$('.footer').show();
+				id = $(obj[i]).data('id');
+				id = id.match(id)[0].replace("`","").replace("`","");
+				console.log('id',id);
+				// buy = $(this).data('id');
+				check_arr.push(id);
+				console.log(check_arr[i]);
+				window.location.href= `/CarBuy?id=${check_arr}`;
+				// window.open("post",`/CarBuy?id=${check_arr}`);
+				// window.open(`/CarBuy?id=${check_arr}`);
+			}
+			// console.log(check_arr);
+		}
+		// window.location.href= `/CarBuy`;
+
+	})
+
+
+</script>
+</body>
+</html>

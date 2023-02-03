@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="images/图标/LOGO.png" rel="shortcut icon" type="image/x-icon" />
+    <title>用户中心 - 我的收藏</title>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href='/stylesheets/bootstrap-theme.min.css'>
+    <style>
+        body{
+            /*border-left:1px solid rgba(0, 0, 0, 0.2);*/
+            /*background-color: #f8eee5;*/
+        }
+        .container{
+            margin-top: 30px;
+        }
+        .header{
+            background:  rgb(229, 223, 219);
+            height: 50px;
+            line-height: 50px;/* 设置行高 */
+        }
+        .header ul{
+            width: 1200px;
+            margin: auto;   /* 居中显示 */
+        }
+        /* 导航内的无序列表 */
+        .header ul li{
+            display: inline-block;/* 设置为行内块级元素 */
+        }
+        /* 导航栏内的a标签 */
+        .header ul li a{
+            display: block;
+            padding: 0 40px;
+            color: #4e4e4e;
+            text-underline: none;
+        }
+        .header ul .active a{
+
+            background: rgb(229,223,219);
+        }
+        .header ul li a:hover{
+            text-underline: none;
+            background: rgb(229,223,219);
+        }
+
+    </style>
+</head>
+
+<body>
+<div class="container">
+    <div class="main">
+        <!-- 菜单栏 -->
+        <div class="header">
+            <ul>
+                <li class="">
+                    <a href="car" target="bottom">我收藏的</a>
+                </li>
+                <li >
+                    <a href="/order" target="bottom">我的订单</a>
+                </li>
+                <li>
+                    <a href="/publish" target="bottom">我发布的</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<script src="/javascripts/jquery.js"></script>
+
+</body>
+</html>

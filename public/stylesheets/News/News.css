@@ -1,0 +1,524 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration:none;
+}
+
+#nav{
+    list-style: none;
+    height: 50px;
+    /*border-bottom: 1px solid rgba(91, 91, 91, 0.2);*/
+}
+/*LOGO图片*/
+.left:nth-of-type(1) .LOGO {
+    display: block;
+    float: left;
+    margin-top: 13px;
+    margin-left: 30px;
+}
+/*LOGO文字*/
+#nav:nth-of-type(1) .wenzi {
+    display: block;
+    float: left;
+    margin-top: 15px;
+    padding-left:15px;
+    color:#3b3b3b;
+    font-size:23px;
+    font-family:Blackadder ITC;
+}
+/*电话图标*/
+#nav:nth-of-type(1) .phone {
+    display: block;
+    float: left;
+    margin-top: 2px;
+    padding-left:15px;
+    margin-right: 200px;
+}
+.nav li a{
+    padding-left: 20px;
+    text-decoration:none;
+    color:#4e413b;
+}
+
+.nav li a:hover{
+    color:#857671;
+    cursor: pointer;
+}
+/*导航栏左侧*/
+.col-md-6{
+    justify-content:left;
+    left:0px;
+    position:absolute;
+}
+/*导航栏*/
+.navigation{
+    list-style: none;
+    font-family: "隶书";
+    width: 100%;
+    position: absolute;
+    margin-top: 20px;
+    padding-left: 60%;
+    display: flex;
+    background-color: rgb(229, 223, 219);
+}
+.navigation li{
+    padding-left: 25px;
+}
+
+/*LOGO文字*/
+.nav li .logotext{
+    display: inline-block;
+    line-height: 100%;
+    margin-left:30px;
+    color:#3b3b3b;
+    font-size:18px;
+    font-family:Blackadder ITC;
+}
+nav ul .active a{
+    /* 设置下划线 */
+    border-bottom: 2px solid  rgb(116, 80, 68);
+}
+.navigation li a{
+    position: relative;
+    display: block;
+    text-align: center;
+    color: #262626;
+    font-size: 20px;
+    /*text-transform: uppercase;  定义无小写字母，仅有大写字母*/
+    transition: 0.5s;
+    padding: 5px 20px;}
+
+.navigation li a:hover{
+    border-radius: 4px;
+    text-decoration:none;
+    color: rgb(123,87,108);
+    background: rgb(255, 255, 255);
+}
+.navigation li a:before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 12px;
+    height: 12px;
+    border:solid rgb(116, 80, 68);
+    border-radius: 2px;
+    border-width: 0 0 3px 3px ;
+    transition: 0.5s;
+    opacity: 0;
+}
+.navigation li a:hover:before{
+    bottom: -8px;
+    left: -8px;
+    opacity: 1;
+}
+.navigation li a:after{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 12px;
+    height: 12px;
+    border-radius: 2px;
+    border: solid rgb(116, 80, 68);
+    border-width: 3px 3px 0 0;
+    transition: 0.5s;
+    opacity: 0;
+}
+.navigation li a:hover:after{
+    top: -8px;
+    right: -8px;
+    opacity: 1;
+}
+
+/*内容*/
+.container{
+    position: relative;
+    margin-top: 100px;
+}
+/*居中显示*/
+.case{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate( -50% , 0 );
+    overflow: hidden;
+}
+
+/*轮播图*/
+.container .box{
+    display: flex;
+    float: left;
+    width: 65%;
+    height: 65vh;
+    box-sizing:border-box;
+    position: relative;
+    overflow: hidden;
+    font-family: "PingFang SC","Microsoft Yahei",sans-serif;
+}
+/* 设置轮播组件占满整个屏幕 */
+.image-slider {
+    width: 100%;
+    height: 100%;
+}
+
+/* 设置每个幻灯片占满父容器 */
+.image-slider .slide {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: all linear 0.8s;
+    overflow: hidden;
+}
+
+/* 设置图片样式 */
+.image-slider .image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 图片自适应，保持比例占满屏幕 */
+    position: absolute;    /* 绝对布局，z-index 50放到文字下方 */
+    z-index: 50;
+}
+
+/* 设置文本样式 */
+.image-slider .slide .content {
+    position: absolute;
+    z-index: 100;    /* 放在图片上方 */
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 15px;
+    bottom: 0;
+    width: 100%;
+    /*height: 15px;*/
+}
+
+/* 控制按钮 */
+#prev,
+#next {
+    position: absolute;
+    z-index: 150;
+    width: 50px;
+    height: 50px;
+    font-size: 48px;
+    color: white;
+    opacity: 0.5;
+    border-radius: 50%;
+    /*background-color: rgba(255, 255, 255, 0.5);*/
+    top: calc(50% - 24px);    /* 在组件中的位置 */
+    left: 50px;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+/* 下一张按钮的位置，靠右 */
+#next {
+    left: unset;
+    right: 50px;
+}
+
+/* 鼠标移到按钮上时改变背景和字体颜色 */
+#prev:hover,
+#next:hover {
+    opacity: 1;
+    /*background-color: rgba(255, 255, 255, 0.8);*/
+}
+
+/* 隐藏其他幻灯片 */
+.image-slider .slide {
+    opacity: 0;
+}
+
+/* 设置当前正在播放的幻灯片的透明度为1 */
+.image-slider .slide.current {
+    opacity: 1;
+}
+
+/* 图片文字描述动画属性,向下移动500px */
+.image-slider .slide .content {
+    opacity: 0;
+    transform: translateY(500px);
+}
+
+/* 当前正在播放的幻灯片的文字描述位置移动到原位 */
+.image-slider .slide.current .content {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 1s ease-in-out 0.4s;
+}
+
+/* 适配屏幕 */
+@media screen and (max-width: 960px) {
+    .image-slider .slide .content {
+        width: 100%;    /* 文字占满屏幕 */
+    }
+
+    /* 控制按钮大小和间距缩小 */
+    #prev,
+    #next {
+        font-size: 24px;
+        left: 24px;
+        width: 48px;
+        height: 48px;
+        line-height: 48px;
+        top: 40%;
+    }
+
+    /* 移动下一张按钮，使间距变小 */
+    #next {
+        left: unset;
+        right: 24px;
+    }
+}
+
+/*轮播图右边*/
+.case .row{
+    width: 31%;
+    padding-top: 0px;
+    float: right;
+    /*position: relative;*/
+    /*margin-top: 20px;*/
+}
+.case .row h3{
+    margin-left:-50px;
+    font-family: 等线;
+    text-align: center;
+}
+.case .row h3 img{
+    opacity: 0.7;
+    float: left;
+    /*padding-left: 20px;*/
+    width:30px;
+    cursor: pointer;
+}
+.case .row h3 img:hover{
+    opacity: 1;
+    width:33px;
+    transition: 0.2s;
+}
+.case .row ul {
+    margin-left: 20px;
+    font-size: 18px;
+    font-family: "等线";
+    position: absolute;
+    list-style:none;
+}
+.case .row ul li{
+    margin-top:5px;
+    padding: inherit;
+    overflow: hidden;
+}
+.case .row ul a{
+    color: rgb(0, 0, 0);
+}
+.case .row ul a:hover{
+    color: rgb(157, 0, 0);
+    text-decoration:underline ;
+    margin-top:15px;
+}
+
+/*轮播图下面的内容*/
+.containerBox{
+    width: 100%;
+    height: 130vh;
+    top:70vh;
+    left: -10px;
+    position: absolute;
+    overflow: hidden;
+}
+
+/*左边*/
+.containerBox .leftCase{
+    display: flex;
+    float: left;
+    width: 70%;
+    height: 150vh;
+    position: relative;
+    overflow: hidden;
+}
+
+/*视频盒子*/
+.containerBox .leftCase .mp4{
+    display: flex;
+    float: left;
+    width: 100%;
+    height: 30vh;
+    left: 10px;
+    position: relative;
+    overflow: hidden;
+}
+.leftCase .Box-1{
+    display:inline-block;
+    position: relative; /*相对位置*/
+    width: 500px; /*宽度*/
+    height: 200px;
+    background-color: rgba(243, 239, 232,0.5);
+    margin-right: 20px;
+    justify-content: space-around; /*周围允许有空间*/
+    overflow: hidden;
+}
+
+/*视频设置*/
+.VdoBx{
+    width: 100%;
+    height: 100%;
+}
+
+/*新闻资讯*/
+.containerBox .leftCase .NewBox{
+    width: 100%;
+    height: 100vh;
+    top:30vh;
+    position: absolute;
+    overflow: hidden;
+}
+.leftCase .NewBox .contentNew{
+    width: 100%;
+    height: 100vh;
+    top: 10vh;
+    position: relative;
+    overflow: hidden;
+}
+
+/*第一则*/
+.rowLink{
+    width:100%;
+    height: 190px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+.imageII{
+    height: 150px;
+    width: 30%;
+    justify-content: center;
+    float: left;
+    margin-left: 20px;
+    padding-top: 10px;
+    overflow: hidden;
+    transition: height 2s;
+    -webkit-transition: width 2s;
+}
+.imageII img{
+    left: 0;
+    width: 100%;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+}
+.imageII img:hover{
+    transform: scale(1.2);/*图片放大*/
+    cursor: pointer;
+}
+.textII{
+    height: 150px;
+    width: 60%;
+    float: right;
+    padding:10px;
+    text-align: left;
+    overflow: hidden;
+}
+.ShangII{
+    text-align: left;
+    margin-top: 0;
+    border-radius: 5%;
+}
+.ShangII:hover{
+    cursor: pointer;
+    color: #d9534f;
+}
+.textII  > p{
+    margin-top: 15px;
+    font-size: 14px;
+    text-indent: 2em;
+}
+.textII  > p a{
+    color: #262626;
+    top: 30vh;
+    transition: 0.3s;/*字体放大速度*/
+}
+.textII p a:hover{
+    cursor: pointer;
+    color: #d9534f;
+}
+.date{
+    font-size: 1%;
+    color: rgba(69, 69, 69, 0.8);
+    position:relative;
+    margin-top: 15px;
+    float:right;
+}
+
+/*右边*/
+.containerBox .rightCase{
+    display: flex;
+    float: right;
+    width: 29%;
+    height: 200vh;
+    position: relative;
+    overflow: hidden;
+}
+.rightCase header{
+    width: 99%;
+    height:60vh;
+    position: absolute;
+    overflow: hidden;
+}
+.rightCase header h3{
+    font-family: 等线;
+    color: rgb(50, 50, 50);
+    background-color: #d9534f;
+    /*color: #d9534f;*/
+}
+.rightCase header li{
+    text-align:left;
+    margin-top: 22px;
+}
+.rightCase header li a{
+    color: rgb(1, 74, 126);
+
+}
+.rightCase header li a:hover{
+    color: brown;
+}
+.Qiong{
+    width: 99%;
+    height: 65vh;
+    top:62vh;
+    position: absolute;
+    overflow: hidden;
+}
+.Qiong .Le{
+    width: 99%;
+    height: 100%;
+}
+.Qiong .Le .Lei{
+    height: 150px;
+    width: 88%;
+    justify-content: center;
+    float: left;
+    margin-left: 20px;
+    padding-top: 10px;
+    overflow: hidden;
+    transition: width 2s;
+    -webkit-transition: width 2s; /* Safari */
+}
+
+/*!*结尾视频*!*/
+/*.end{*/
+/*    width: 100%;*/
+/*    height: 145vh;*/
+/*    top:210vh;*/
+/*    position: absolute;*/
+/*    overflow: hidden;*/
+/*}*/
+/*.endVideo{*/
+/*    width: 100vw;*/
+/*    height: 80vh;*/
+/*}*/
+/*.Below-Box{*/
+/*    margin-top: 420px;*/
+/*    width: 100%;*/
+/*    height: 50px;*/
+/*    background-color: rgb(140, 140, 140);*/
+/*}*/
+
